@@ -13,7 +13,7 @@ namespace Fakejam.Input
 
         private void Awake()
         {
-            if (_instance != this)
+            if (_instance != null && _instance != this)
             {
                 Destroy(this);
                 return;
@@ -21,6 +21,14 @@ namespace Fakejam.Input
 
             _instance = this;
             DontDestroyOnLoad(this);
+
+            var currentTransform = gameObject.transform;
+            for (int i = 0; i < currentTransform.childCount; i++)
+            {
+                var child = currentTransform.GetChild(i);
+                Add(child);
+            }
+            
         }
 
         public static void Add(object accessibleObject)
@@ -56,6 +64,15 @@ namespace Fakejam.Input
                 {
                     _cachedObjectMap[type] = tElement;
                     return tElement;
+                }
+                if (element is Component component)
+                {
+                    var matchingComponent = component.GetComponent<T>();
+                    if (matchingComponent != null)
+                    {
+                        _cachedObjectMap[type] = matchingComponent;
+                        return matchingComponent;
+                    }
                 }
             }
 
