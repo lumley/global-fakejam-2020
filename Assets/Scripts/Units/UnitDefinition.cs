@@ -13,6 +13,8 @@ namespace Fakejam.Units
 
         [Header("To Spawn")] [SerializeField] private GameObject _prefabOfUnit;
 
+        [Header("Unit Icon")] [SerializeField] private Sprite _icon;
+
         public int MaxHealth => _maxHealth;
 
         public int Damage => _damage;
@@ -24,5 +26,7 @@ namespace Fakejam.Units
         public float MovementSpeed => _movementSpeed;
 
         public GameObject PrefabOfUnit => _prefabOfUnit;
+
+        public Sprite Icon => _icon;
     }
 }
