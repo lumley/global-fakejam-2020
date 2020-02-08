@@ -17,3 +17,4 @@ MonoBehaviour:
   _defense: 0
   _range: 10
   _movementSpeed: 1
+  _prefabOfUnit: {fileID: 0}
