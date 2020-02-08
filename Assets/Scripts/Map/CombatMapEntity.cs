@@ -21,5 +21,6 @@ namespace Fakejam.Input
 
         [SerializeField]
         public Point gridPos;
+
     }
 }

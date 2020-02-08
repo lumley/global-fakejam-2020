@@ -32,6 +32,7 @@ namespace Fakejam.Input
 
         public void OnControlFlagClicked(UnitControlFlag clickedFlag)
         {
+            Debug.Log("Control Flag CLicked");
             if (!unitOrdersInputManager.isWaitingForTarget)
             {
                 // Dont show UnitInfo if we are currently looking for a Target for UnitOrders
@@ -43,6 +44,7 @@ namespace Fakejam.Input
 
         public void OnSurfaceClicked(CombatControlSurface targetSurface)
         {
+            Debug.Log("Surface CLicked");
             unitOrdersInputManager.SurfaceClicked( targetSurface );
         }
     }

@@ -19,6 +19,7 @@ public class UnitControlFlag : CombatControlSurface
     
     protected override void OnClick()
     {
+        Debug.Log("Flag Click");
         inputManager.CombatInputManager.OnControlFlagClicked(this);
     }
 

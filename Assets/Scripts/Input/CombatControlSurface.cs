@@ -17,10 +17,8 @@ namespace Fakejam.Input
         ///     
         /// </summary>
 
-        [SerializeField]
         private CombatClickable combatClickable;
 
-        [SerializeField]
         private UnitTargetable targetable;
         public UnitTargetable Targetable => targetable;
 
@@ -34,12 +32,16 @@ namespace Fakejam.Input
 
         private void OnDestroy()
         {
-            combatClickable.OnClick.RemoveListener(OnClick);
+            if(combatClickable != null)
+            {
+                combatClickable.OnClick.RemoveListener(OnClick);
+            }
         }
 
         protected virtual void OnClick()
         {
             // Override this function for click functionality
+            Debug.Log("Clicker");
             inputManager.CombatInputManager.OnSurfaceClicked(this);
         }
 

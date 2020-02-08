@@ -8,14 +8,5 @@ public class MapObjective : UnitTargetable
     // Works like a Squad Group
 
     // Use this for initialization
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
+    
 }
