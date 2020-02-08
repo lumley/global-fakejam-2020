@@ -186,7 +186,7 @@ PrefabInstance:
     - target: {fileID: 1603999159453451147, guid: 6964287c3c7024856b64c5bef7c95ecc,
         type: 3}
       propertyPath: m_Name
-      value: MyFlag
+      value: ControlFlag
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6964287c3c7024856b64c5bef7c95ecc, type: 3}
