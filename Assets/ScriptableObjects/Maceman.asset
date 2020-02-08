@@ -18,6 +18,6 @@ MonoBehaviour:
   _attackRange: 2
   _viewRange: 10
   _movementSpeed: 2
-  _prefabOfUnit: {fileID: 677165981643067811, guid: 1b5ac493f49db4d748e844c8dfd51e18,
+  _prefabOfUnit: {fileID: 6182822612013540460, guid: 20e8ef95d69704752ad83537b4070809,
     type: 3}
   _icon: {fileID: 0}
