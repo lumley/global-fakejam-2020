@@ -4,22 +4,24 @@ using System.Collections.Generic;
 
 namespace Fakejam.Input
 {
-    public class SquadGroup : MonoBehaviour
+    // A group of Squad Members that can be 
+    public class SquadGroup : UnitTargetable
     {
-        private CombatClickable combatTarget;
-        private CombatClickable combatControl;
+        
+        private UnitTargetable combatTarget;
         private List<SquadMember> squadMembers;
 
-        // Use this for initialization
-        void Start()
+        protected override void Start()
         {
-
+            base.Start();
+            combatTarget = null;
+            squadMembers = new List<SquadMember>();
         }
 
-        // Update is called once per frame
-        void Update()
+        public void setTarget(UnitTargetable target )
         {
-
+            Debug.Log($"Target set: {target.name}", target);
+            combatTarget = target;
         }
     }
 }
