@@ -27,18 +27,22 @@ namespace Units
             _attackRangeCollider = parentTransform.Find("AttackRange").GetComponent<SphereCollider>();
             _attackRangeCollider.radius = unitDefinition.AttackRange;
 
-            _viewRangeCollider = parentTransform.Find("ViewRange").GetComponent<SphereCollider>();
-            _viewRangeCollider.radius = unitDefinition.ViewRange;
         }
 
-        private void FixedUpdate()
+        void Attack(GameObject[] targets)
         {
+            foreach (GameObject target in targets)
+            {
+                Debug.Log("start attacking " + target.name);    
+            }
+
+            
         }
 
-
-        // Update is called once per frame
-        void Update()
+        void Move(Vector3 position)
         {
+            Debug.Log("Move to position " + position);
         }
+
     }
 }
