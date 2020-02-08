@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8145161309847878163}
   - component: {fileID: 6547944558766945931}
   - component: {fileID: 7940323057876217228}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47,6 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unitDefinition: {fileID: 0}
+  playerType: 0
 --- !u!212 &8145161309847878163
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -141,7 +142,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8399522232781031484}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BaseUnit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
