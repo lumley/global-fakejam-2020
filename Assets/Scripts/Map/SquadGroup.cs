@@ -28,7 +28,7 @@ namespace Fakejam.Input
                 squadMembers.Add(newMember);
 
                 //Collider2D spawnArea = battleManager.playerSpawnArea;
-
+                newMember.setOwner(owner);
                 newMember.TeleportTo(getRandomPositionInBounds(transform.position, influenceRange.radius));
             }
         }

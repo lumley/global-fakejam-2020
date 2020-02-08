@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using Units;
+using Fakejam.Players;
 
 namespace Fakejam.Input
 {
@@ -20,6 +21,11 @@ namespace Fakejam.Input
         {
             targetPos = target;
             unitController.Move(targetPos);
+        }
+
+        public void setOwner(PlayerType type)
+        {
+            unitController.setOwner(type);
         }
     }
 }

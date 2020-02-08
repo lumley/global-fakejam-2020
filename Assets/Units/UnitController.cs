@@ -35,11 +35,14 @@ namespace Units
 
         void Start()
         {
-            
-
             _health = unitDefinition.MaxHealth;
             _attackCoroutine = StartCoroutine(AttackRepeat());
             _alreadyStarted = true;
+        }
+
+        public void setOwner(PlayerType type)
+        {
+            playerType = type;
         }
 
         private void OnDisable()
