@@ -12,8 +12,13 @@ namespace Fakejam.Units
         [SerializeField] private int _defense;
         [SerializeField] private float _attackSpeed;
         [SerializeField] private float _attackRange;
+        
         [SerializeField, Tooltip("Units/second")] private float _movementSpeed;
+
+        [Header("Squad Vars")]
+
         [SerializeField] private int _squadSize;
+        [SerializeField] private float _influenceRange;
 
         [Header("To Spawn")] [SerializeField] private SquadMember _prefabOfUnit;
 
@@ -37,6 +42,7 @@ namespace Fakejam.Units
         public float MovementSpeed => _movementSpeed;
 
         public float SquadSize => _squadSize;
+        public float InfluenceRange => _influenceRange;
 
         public SquadMember PrefabOfUnit => _prefabOfUnit;
 

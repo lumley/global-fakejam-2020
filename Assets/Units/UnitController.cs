@@ -125,7 +125,7 @@ namespace Units
                 return;
             }
 
-            Debug.Log("Move to position " + position);
+            //Debug.Log("Move to position " + position);
             _navMeshAgent.destination = position;
         }
     }
