@@ -1,8 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Drawing;
-
-
+using Fakejam.Players;
 
 namespace Fakejam.Input
 {
@@ -17,7 +16,7 @@ namespace Fakejam.Input
     public class CombatMapEntity : MonoBehaviour
     {
         [SerializeField]
-        public Faction owner;
+        public PlayerType owner;
 
         [SerializeField]
         public Point gridPos;

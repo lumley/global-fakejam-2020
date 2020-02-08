@@ -17,6 +17,8 @@ namespace Fakejam.Units
 
         [Header("Unit Icon")] [SerializeField] private Sprite _icon;
 
+        [Header("While In Combat")] [SerializeField] private SquadBehavior _squadBehavior;
+
         public int MaxHealth => _maxHealth;
 
         public int Damage => _damage;
@@ -32,5 +34,7 @@ namespace Fakejam.Units
         public GameObject PrefabOfUnit => _prefabOfUnit;
 
         public Sprite Icon => _icon;
+
+        public SquadBehavior SquadBehavior => _squadBehavior;
     }
 }
