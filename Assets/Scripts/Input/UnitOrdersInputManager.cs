@@ -37,17 +37,28 @@ namespace Fakejam.Input
                 var targetSquad = clickedFlag.Targetable as SquadGroup;
                 if(targetSquad && targetSquad.owner == Faction.PLAYER)
                 {
+                    Debug.Log("Selecting Player Unit For Orders", targetSquad);
                     sourceSquad = targetSquad;
                     return;
                 }
+            }
+            else
+            {
+                
+                Debug.Log($"Assigning Flag As Target for {sourceSquad.name}", clickedFlag);
+                sourceSquad.setTarget(clickedFlag.Targetable);
+                sourceSquad = null;
             }
         }
 
         public void SurfaceClicked( CombatControlSurface clickedSurface )
         {
+            Debug.Log("Surface Clicked");
             if(sourceSquad != null)
             {
+                Debug.Log("Assigning Surface As Target", clickedSurface);
                 sourceSquad.setTarget(clickedSurface.Targetable);
+                sourceSquad = null;
             }
         }
 

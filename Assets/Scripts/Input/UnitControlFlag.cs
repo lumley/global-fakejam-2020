@@ -16,13 +16,8 @@ using Fakejam.Input;
 
 public class UnitControlFlag : CombatControlSurface
 {
-    
     protected override void OnClick()
     {
-        Debug.Log("Flag Click");
-        var man = inputManager;
-        var com = man.CombatInputManager;
-        com.OnControlFlagClicked(this);
+        inputManager.CombatInputManager.OnControlFlagClicked(this);
     }
-
 }
