@@ -59,4 +59,15 @@ MonoBehaviour:
     - Owner: 1
       UnitDefinition: {fileID: 11400000, guid: 9d7104ac63d3a44319df36699f13e70f, type: 2}
       Count: 15
+  _productionTimeLevels:
+  - 15
+  - 15
+  - 14
+  - 13
+  - 12
+  - 10
+  - 8
+  - 7
+  - 6
+  - 5
   _currentLevel: 0
