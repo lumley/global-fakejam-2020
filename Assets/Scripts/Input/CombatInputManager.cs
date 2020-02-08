@@ -11,9 +11,9 @@ namespace Fakejam.Input
             inputManager.CombatInputManager = this;
         }
 
-        public void OnFlagSelected( Flag targetFlag )
+        public void OnFlagSelected(CombatControlFlag targetFlag )
         {
-            Debug.Log($"Clicked {targetFlag.name}");
+            Debug.Log($"Clicked {targetFlag.name}", targetFlag);
         }
 
 
