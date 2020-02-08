@@ -7,10 +7,9 @@ using UnityEngine.EventSystems;
 
 public class CombatClickable : MonoBehaviour, IPointerClickHandler
 {
-    // Class that will Read input. It will know when it has been clicked.
+    // Reads input. Transmits when it has been clicked.
 
     public UnityEvent OnClick;
-
 
     public void OnPointerClick(PointerEventData eventData) => OnClick?.Invoke();
 }
