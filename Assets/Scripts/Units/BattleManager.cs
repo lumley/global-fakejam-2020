@@ -12,6 +12,7 @@ namespace Fakejam.Units
         [Header("Initial combat values")] [SerializeField]
         private List<Squad> _combatSquads;
 
+        public UnitDefinition[] AllUnitDefinitions => _allUnitDefinitions;
 
         public List<Squad> GetAllSquadsInCombat()
         {
