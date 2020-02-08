@@ -16,5 +16,15 @@ namespace Fakejam.Units
         /// Unit count in this squad
         /// </summary>
         public int Count;
+
+        public Squad Clone()
+        {
+            return new Squad
+            {
+                Owner = Owner,
+                UnitDefinition = UnitDefinition,
+                Count = Count
+            };
+        }
     }
 }
