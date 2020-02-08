@@ -1,7 +1,7 @@
 using DG.Tweening;
 using Fakejam.Units;
 using UnityEngine;
-using UnityEngine.Events;
+using UnityEngine.AI;
 
 namespace Fakejam.Production
 {
@@ -15,7 +15,7 @@ namespace Fakejam.Production
 
         [SerializeField] private SpriteRenderer _imageOfUnit;
 
-        [SerializeField] private ParticleSystem _productionParticles;
+        [SerializeField] private ParticleSystem _productionActive;
         [SerializeField] private CountdownTimer _countdownTimer;
 
         [Header("Animation")]
@@ -25,11 +25,19 @@ namespace Fakejam.Production
         
         private Tween _currentTween;
         private bool _isAlreadyProducing;
+        private Vector3 _positionWhereUnitsWillWalk;
 
-        public void SetProduction(UnitDefinition producingUnit, int initialCount)
+        public void SetProduction(UnitDefinition producingUnit, int initialCount, Transform transformWhereUnitsWillWalk)
         {
             _producingUnit = producingUnit;
             _currentUnitCount = initialCount;
+            _positionWhereUnitsWillWalk = transformWhereUnitsWillWalk.position;
+
+            for (int i = 0; i < initialCount; i++)
+            {
+                var instance = Instantiate(_producingUnit.PrefabOfProductionUnit);
+                instance.transform.position = _positionWhereUnitsWillWalk;
+            }
 
             if (_producingUnit.Icon != null)
             {
@@ -49,6 +57,9 @@ namespace Fakejam.Production
 
         private void OnEnable()
         {
+            var emission = _productionActive.emission;
+            emission.enabled = false;
+            
             _clickable.OnDown.AddListener(OnBuildingDown);
             _clickable.OnUp.AddListener(OnProductionClicked);
             _countdownTimer.OnTrigger.AddListener(OnUnitProduced);
@@ -87,15 +98,26 @@ namespace Fakejam.Production
             _currentTween.Kill(false);
             _currentTween = transform.DOScale(Vector3.one, _animationTimeUp).SetEase(Ease.OutElastic);
 
-            _productionParticles.gameObject.SetActive(true);
+            _isAlreadyProducing = true;
+            var emission = _productionActive.emission;
+            emission.enabled = true;
             _countdownTimer.SetTime(_producingUnit.ProductionTime);
         }
 
         private void OnUnitProduced()
         {
-            _productionParticles.gameObject.SetActive(false);
-            
-            // TODO (slumley): Reactivate building
+            var emission = _productionActive.emission;
+            emission.enabled = false;
+            _isAlreadyProducing = false;
+            _currentUnitCount++;
+
+            var instance = Instantiate(_producingUnit.PrefabOfProductionUnit);
+            instance.transform.position = transform.position;
+            var navMeshAgent = instance.GetComponent<NavMeshAgent>();
+            if (navMeshAgent != null)
+            {
+                navMeshAgent.destination = _positionWhereUnitsWillWalk;
+            }
         }
     }
 }
