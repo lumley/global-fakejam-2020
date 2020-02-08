@@ -1,6 +1,7 @@
 using DG.Tweening;
 using Fakejam.Units;
 using UnityEngine;
+using UnityEngine.AI;
 
 namespace Fakejam.Production
 {
@@ -24,11 +25,19 @@ namespace Fakejam.Production
         
         private Tween _currentTween;
         private bool _isAlreadyProducing;
+        private Vector3 _positionWhereUnitsWillWalk;
 
-        public void SetProduction(UnitDefinition producingUnit, int initialCount)
+        public void SetProduction(UnitDefinition producingUnit, int initialCount, Transform transformWhereUnitsWillWalk)
         {
             _producingUnit = producingUnit;
             _currentUnitCount = initialCount;
+            _positionWhereUnitsWillWalk = transformWhereUnitsWillWalk.position;
+
+            for (int i = 0; i < initialCount; i++)
+            {
+                var instance = Instantiate(_producingUnit.PrefabOfProductionUnit);
+                instance.transform.position = _positionWhereUnitsWillWalk;
+            }
 
             if (_producingUnit.Icon != null)
             {
@@ -101,6 +110,14 @@ namespace Fakejam.Production
             emission.enabled = false;
             _isAlreadyProducing = false;
             _currentUnitCount++;
+
+            var instance = Instantiate(_producingUnit.PrefabOfProductionUnit);
+            instance.transform.position = transform.position;
+            var navMeshAgent = instance.GetComponent<NavMeshAgent>();
+            if (navMeshAgent != null)
+            {
+                navMeshAgent.destination = _positionWhereUnitsWillWalk;
+            }
         }
     }
 }

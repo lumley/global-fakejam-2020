@@ -23,3 +23,5 @@ MonoBehaviour:
   _icon: {fileID: 21300000, guid: 520ed4c497c47441689230ff80621ab0, type: 3}
   _squadBehavior: {fileID: 0}
   _productionTime: 1
+  _prefabOfProductionUnit: {fileID: 8225825095962130060, guid: ae8989c18af0f4ecebe75ebc35a99b40,
+    type: 3}

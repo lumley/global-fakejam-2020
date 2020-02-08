@@ -22,6 +22,9 @@ namespace Fakejam.Units
         [Header("Production")] [SerializeField]
         private float _productionTime;
 
+        [SerializeField]
+        private GameObject _prefabOfProductionUnit;
+
         public int MaxHealth => _maxHealth;
 
         public int Damage => _damage;
@@ -41,5 +44,7 @@ namespace Fakejam.Units
         public SquadBehavior SquadBehavior => _squadBehavior;
 
         public float ProductionTime => _productionTime;
+
+        public GameObject PrefabOfProductionUnit => _prefabOfProductionUnit;
     }
 }
