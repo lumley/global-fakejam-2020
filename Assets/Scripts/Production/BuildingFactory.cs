@@ -25,7 +25,7 @@ namespace Fakejam.Production
             foreach (var squad in squadsForOwner)
             {
                 unitToCountMap.TryGetValue(squad.UnitDefinition, out int count);
-                unitToCountMap[squad.UnitDefinition] = count;
+                unitToCountMap[squad.UnitDefinition] = count + squad.Count;
             }
             
             var allUnitDefinitions = battleManager.AllUnitDefinitions;

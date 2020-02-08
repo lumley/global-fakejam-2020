@@ -36,7 +36,13 @@ namespace Fakejam.Production
             for (int i = 0; i < initialCount; i++)
             {
                 var instance = Instantiate(_producingUnit.PrefabOfProductionUnit);
-                instance.transform.position = _positionWhereUnitsWillWalk;
+                var randomPosition = new Vector3(Random.Range(-2, 2), 0, Random.Range(-2, 2));
+                instance.transform.position = _positionWhereUnitsWillWalk + randomPosition;
+                var navMeshAgent = instance.GetComponent<NavMeshAgent>();
+                if (navMeshAgent != null)
+                {
+                    navMeshAgent.destination = _positionWhereUnitsWillWalk;
+                }
             }
 
             if (_producingUnit.Icon != null)
