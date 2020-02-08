@@ -1,7 +1,6 @@
 using DG.Tweening;
 using Fakejam.Units;
 using UnityEngine;
-using UnityEngine.Events;
 
 namespace Fakejam.Production
 {
@@ -15,7 +14,7 @@ namespace Fakejam.Production
 
         [SerializeField] private SpriteRenderer _imageOfUnit;
 
-        [SerializeField] private ParticleSystem _productionParticles;
+        [SerializeField] private ParticleSystem _productionActive;
         [SerializeField] private CountdownTimer _countdownTimer;
 
         [Header("Animation")]
@@ -49,6 +48,9 @@ namespace Fakejam.Production
 
         private void OnEnable()
         {
+            var emission = _productionActive.emission;
+            emission.enabled = false;
+            
             _clickable.OnDown.AddListener(OnBuildingDown);
             _clickable.OnUp.AddListener(OnProductionClicked);
             _countdownTimer.OnTrigger.AddListener(OnUnitProduced);
@@ -87,15 +89,18 @@ namespace Fakejam.Production
             _currentTween.Kill(false);
             _currentTween = transform.DOScale(Vector3.one, _animationTimeUp).SetEase(Ease.OutElastic);
 
-            _productionParticles.gameObject.SetActive(true);
+            _isAlreadyProducing = true;
+            var emission = _productionActive.emission;
+            emission.enabled = true;
             _countdownTimer.SetTime(_producingUnit.ProductionTime);
         }
 
         private void OnUnitProduced()
         {
-            _productionParticles.gameObject.SetActive(false);
-            
-            // TODO (slumley): Reactivate building
+            var emission = _productionActive.emission;
+            emission.enabled = false;
+            _isAlreadyProducing = false;
+            _currentUnitCount++;
         }
     }
 }

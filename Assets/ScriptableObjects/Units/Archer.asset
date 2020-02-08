@@ -15,10 +15,11 @@ MonoBehaviour:
   _maxHealth: 5
   _damage: 1
   _defense: 0
-  _attackSpeed: 0.5
+  _attackSpeed: 0
   _attackRange: 5
   _movementSpeed: 1
   _prefabOfUnit: {fileID: 744772821208400082, guid: 7cd251031d5e94b02b38b37326974f61,
     type: 3}
-  _icon: {fileID: 0}
-  _squadBehavior: {fileID: 11400000, guid: 72c04987c9bb241758ef6b5449066bef, type: 2}
+  _icon: {fileID: 21300000, guid: 9142ffa34a0fb4fe78fb3fd2b328c029, type: 3}
+  _squadBehavior: {fileID: 0}
+  _productionTime: 5
