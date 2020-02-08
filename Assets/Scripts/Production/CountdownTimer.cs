@@ -8,6 +8,7 @@ namespace Fakejam.Production
     {
         [SerializeField] private float _currentTimeLeft;
 
+        public TimeLeftEvent OnTimeSet;
         public TimeLeftEvent OnSecondPassed;
         public UnityEvent OnTrigger;
 
@@ -17,6 +18,7 @@ namespace Fakejam.Production
         {
             _currentTimeLeft = time;
             _previousFullSecond = (int) _currentTimeLeft;
+            OnTimeSet?.Invoke(_currentTimeLeft);
         }
 
         private void Update()
