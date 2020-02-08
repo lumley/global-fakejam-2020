@@ -27,8 +27,10 @@ namespace Fakejam.Scenes
 
         public enum SceneType
         {
-            CombatSelection,
-            Combat
+            UnitProduction = 0,
+            CombatSelection = 1,
+            Combat = 2,
+            MainScene = 3,
         }
         
         [Serializable]

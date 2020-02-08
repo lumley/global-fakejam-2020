@@ -11,6 +11,8 @@ namespace Fakejam.Units
         [SerializeField] private float _range;
         [SerializeField, Tooltip("Units/second")] private float _movementSpeed;
 
+        [Header("To Spawn")] [SerializeField] private GameObject _prefabOfUnit;
+
         public int MaxHealth => _maxHealth;
 
         public int Damage => _damage;
@@ -20,5 +22,7 @@ namespace Fakejam.Units
         public float Range => _range;
 
         public float MovementSpeed => _movementSpeed;
+
+        public GameObject PrefabOfUnit => _prefabOfUnit;
     }
 }

@@ -10,9 +10,22 @@ namespace Fakejam.Input
         
         private readonly List<object> _allObjects = new List<object>();
         private readonly Dictionary<Type, object> _cachedObjectMap = new Dictionary<Type, object>();
+        private bool _isInitialized;
 
         private void Awake()
         {
+            TryInitialize();
+        }
+
+        private void TryInitialize()
+        {
+            if (_isInitialized)
+            {
+                return;
+            }
+
+            _isInitialized = true;
+            
             if (_instance != null && _instance != this)
             {
                 Destroy(this);
@@ -38,6 +51,15 @@ namespace Fakejam.Input
         
         public static T Get<T>() where T : class
         {
+            if (_instance == null)
+            {
+                var toolboxInstance = FindObjectOfType<Toolbox>();
+                if (toolboxInstance == null)
+                {
+                    return null;
+                }
+                toolboxInstance.TryInitialize();
+            }
             return _instance.GetInternal<T>();
         }
 
