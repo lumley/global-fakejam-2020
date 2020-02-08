@@ -1,4 +1,5 @@
-﻿using Fakejam.Units;
+﻿using System;
+using Fakejam.Units;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -21,15 +22,19 @@ namespace Units
             _navMeshAgent = GetComponent<NavMeshAgent>();
             _navMeshAgent.destination = target.transform.position;
             _navMeshAgent.speed = unitDefinition.MovementSpeed;
-            
-            _attackRangeCollider = gameObject.AddComponent<SphereCollider>();
+
+            var parentTransform = transform.parent.gameObject.transform;
+            _attackRangeCollider = parentTransform.Find("AttackRange").GetComponent<SphereCollider>();
             _attackRangeCollider.radius = unitDefinition.AttackRange;
 
-            _viewRangeCollider = gameObject.AddComponent<SphereCollider>();
+            _viewRangeCollider = parentTransform.Find("ViewRange").GetComponent<SphereCollider>();
             _viewRangeCollider.radius = unitDefinition.ViewRange;
-            
-            
         }
+
+        private void FixedUpdate()
+        {
+        }
+
 
         // Update is called once per frame
         void Update()
