@@ -8,26 +8,26 @@ namespace Fakejam.Input
     // A group of Squad Members that can be 
     public class SquadGroup : UnitTargetable
     {
-        private UnitDefinition unitType;
+        public UnitDefinition unitType;
         private UnitTargetable combatTarget;
         private List<SquadMember> squadMembers;
 
-        [SerializeField]
-        private GameObject navMeshContainer;
-
-        public void Spawn( UnitDefinition unitType)
-        {
-            this.unitType = unitType;
-
-        }
-
         private void createSquadMembers()
         {
+            BattleManager battleManager = Toolbox.Get<BattleManager>();
             squadMembers = new List<SquadMember>();
             for (int i = 0; i < unitType.SquadSize; i++)
             {
-                SquadMember newMember = Instantiate<SquadMember>(unitType.PrefabOfUnit, navMeshContainer.transform);
+                SquadMember newMember = Instantiate(unitType.PrefabOfUnit, battleManager.combatUnitsContainer.transform);
                 squadMembers.Add(newMember);
+
+                Collider2D spawnArea = battleManager.playerSpawnArea;
+
+                newMember.setTargetPos(new Vector3(
+                    Random.Range(spawnArea.bounds.min.x, spawnArea.bounds.size.x),
+                    Random.Range(spawnArea.bounds.min.y, spawnArea.bounds.size.y),
+                    1f
+                ));
             }
         }
 
@@ -35,6 +35,7 @@ namespace Fakejam.Input
         {
             base.Start();
             combatTarget = null;
+            createSquadMembers();
         }
 
         public void setTarget(UnitTargetable target )

@@ -13,7 +13,7 @@ namespace Fakejam.Input
 
         public void TeleportTo(Vector3 pos)
         {
-
+            this.transform.position = pos;
         }
 
         public void setTargetPos( Vector3 target)

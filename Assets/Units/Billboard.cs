@@ -4,7 +4,6 @@ using Debug = System.Diagnostics.Debug;
 
 namespace Units
 {
-    [ExecuteAlways]
     public class Billboard : MonoBehaviour
     {
         [SerializeField]
