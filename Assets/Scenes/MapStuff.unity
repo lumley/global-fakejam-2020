@@ -504,6 +504,11 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 969128986}
+    - target: {fileID: 6223419646776901349, guid: 7cd251031d5e94b02b38b37326974f61,
+        type: 3}
+      propertyPath: layerMask.m_Bits
+      value: 512
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7cd251031d5e94b02b38b37326974f61, type: 3}
 --- !u!1001 &9083013890358776629
@@ -518,6 +523,11 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 969128986}
+    - target: {fileID: 704318239772842587, guid: 20e8ef95d69704752ad83537b4070809,
+        type: 3}
+      propertyPath: layerMask.m_Bits
+      value: 512
+      objectReference: {fileID: 0}
     - target: {fileID: 3754161904170175672, guid: 20e8ef95d69704752ad83537b4070809,
         type: 3}
       propertyPath: m_LocalRotation.x

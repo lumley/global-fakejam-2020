@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using Fakejam.Players;
 using Fakejam.Units;
 using UnityEngine;
 using UnityEngine.AI;
@@ -14,59 +16,99 @@ namespace Units
 
         private NavMeshAgent _navMeshAgent;
 
-        private int _health;
+        [SerializeField] private int _health;
+
+        [SerializeField] private PlayerType playerType;
+
+        [SerializeField] private LayerMask layerMask;
+        private Coroutine _attackCoroutine;
+
+        private bool _alreadyStarted = false;
 
         // Start is called before the first frame update
         void Start()
         {
+            playerType = PlayerType.Player;
             _navMeshAgent = GetComponent<NavMeshAgent>();
             _navMeshAgent.speed = unitDefinition.MovementSpeed;
 
             _health = unitDefinition.MaxHealth;
-            InvokeRepeating(nameof(Attack), unitDefinition.AttackSpeed, unitDefinition.AttackSpeed);
+            _attackCoroutine = StartCoroutine(AttackRepeat());
+            _alreadyStarted = true;
         }
 
-        private void Attack()
+        private void OnDisable()
         {
-            
-            if (gameObject.activeSelf == false)
+            if (_attackCoroutine != null)
             {
-                Debug.Log("Unit cannot attack as it is already dead");
-                return;
+                StopCoroutine(_attackCoroutine);
+                _attackCoroutine = null;
             }
+        }
 
-            var targets = Physics.OverlapSphere(transform.position, unitDefinition.AttackRange);
-
-            foreach (Collider target in targets)
+        private IEnumerator AttackRepeat()
+        {
+            while (true)
             {
-                var unitController = target.gameObject.GetComponent<UnitController>();
-                if (unitController == null)
+                if (gameObject.activeSelf)
                 {
-                    Debug.Log("tried to attack non attackable object '" + target.name + "'");
-                    continue;
+                    var targets = Physics.OverlapSphere(transform.position, unitDefinition.AttackRange, layerMask);
+
+                    foreach (Collider target in targets)
+                    {
+                        var unitController = target.gameObject.GetComponent<UnitController>();
+
+                        if (unitController == this)
+                        {
+                            continue;
+                        }
+
+                        if (unitController == null)
+                        {
+                            Debug.Log("tried to attack non attackable object '" + target.name + "'");
+                            continue;
+                        }
+
+                        if (unitController.playerType != playerType)
+                        {
+                            unitController.TakeDamage(unitDefinition.Damage);
+                        }
+
+                        Debug.Log("attacking " + target.name);
+                    }
+                }
+                else
+                {
+                    Debug.Log("Unit cannot attack as it is already dead");
                 }
 
-                unitController.TakeDamage(unitDefinition.Damage);
-                Debug.Log("attacking " + target.name);
+                yield return new WaitForSeconds(unitDefinition.AttackSpeed);
             }
         }
-        
+
 
         void TakeDamage(int damage)
         {
+            if (_alreadyStarted == false)
+            {
+                return;
+            }
+
             if (gameObject.activeSelf == false)
             {
                 Debug.Log("Unit cannot take damage as it is already dead");
                 return;
             }
 
+            var objectName = transform.parent.name;
+            Debug.Log(objectName + " health " + _health);
             _health -= damage;
-            var objectName = gameObject.name;
+
             Debug.Log("Unit '" + objectName + " took " + damage + "damage");
             if (_health <= 0)
             {
                 Debug.Log("Unit '" + objectName + "' died");
-                gameObject.SetActive(false);
+                transform.parent.gameObject.SetActive(false);
             }
         }
 
