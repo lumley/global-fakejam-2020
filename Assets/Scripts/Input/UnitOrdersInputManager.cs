@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System;
+using Fakejam.Players;
 
 namespace Fakejam.Input
 {
@@ -35,7 +36,7 @@ namespace Fakejam.Input
             if (sourceSquad == null)
             {
                 var targetSquad = clickedFlag.Targetable as SquadGroup;
-                if(targetSquad && targetSquad.owner == Faction.PLAYER)
+                if(targetSquad && targetSquad.owner == PlayerType.Player)
                 {
                     Debug.Log("Selecting Player Unit For Orders", targetSquad);
                     sourceSquad = targetSquad;
