@@ -21,6 +21,9 @@ namespace Fakejam.Units
 
         [Header("While In Combat")] [SerializeField] private SquadBehavior _squadBehavior;
 
+        [Header("Production")] [SerializeField]
+        private float _productionTime;
+
         public int MaxHealth => _maxHealth;
 
         public int Damage => _damage;
@@ -40,5 +43,7 @@ namespace Fakejam.Units
         public Sprite Icon => _icon;
 
         public SquadBehavior SquadBehavior => _squadBehavior;
+
+        public float ProductionTime => _productionTime;
     }
 }

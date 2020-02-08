@@ -12,8 +12,6 @@ namespace Units
     {
         [SerializeField] private UnitDefinition unitDefinition;
 
-        private SphereCollider _attackRangeCollider;
-
         private NavMeshAgent _navMeshAgent;
 
         private int _health;
@@ -24,24 +22,24 @@ namespace Units
             _navMeshAgent = GetComponent<NavMeshAgent>();
             _navMeshAgent.speed = unitDefinition.MovementSpeed;
 
-            var parentTransform = transform.parent.gameObject.transform;
-            _attackRangeCollider = parentTransform.Find("AttackRange").GetComponent<SphereCollider>();
-            _attackRangeCollider.radius = unitDefinition.AttackRange;
-
             _health = unitDefinition.MaxHealth;
+            InvokeRepeating(nameof(Attack), unitDefinition.AttackSpeed, unitDefinition.AttackSpeed);
         }
 
-        void Attack(IEnumerable<GameObject> targets)
+        private void Attack()
         {
+            
             if (gameObject.activeSelf == false)
             {
                 Debug.Log("Unit cannot attack as it is already dead");
                 return;
             }
 
-            foreach (GameObject target in targets)
+            var targets = Physics.OverlapSphere(transform.position, unitDefinition.AttackRange);
+
+            foreach (Collider target in targets)
             {
-                var unitController = target.GetComponent<UnitController>();
+                var unitController = target.gameObject.GetComponent<UnitController>();
                 if (unitController == null)
                 {
                     Debug.Log("tried to attack non attackable object '" + target.name + "'");
@@ -52,6 +50,7 @@ namespace Units
                 Debug.Log("attacking " + target.name);
             }
         }
+        
 
         void TakeDamage(int damage)
         {
