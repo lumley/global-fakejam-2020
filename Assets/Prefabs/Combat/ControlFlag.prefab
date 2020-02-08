@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3912161636257922738}
   - component: {fileID: 7165656244407044520}
   m_Layer: 8
-  m_Name: MyFlag
+  m_Name: ControlFlag
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
