@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using Fakejam.Units;
 
 namespace Fakejam.Input
 {
@@ -8,9 +9,14 @@ namespace Fakejam.Input
     public class SquadGroup : UnitTargetable
     {
         
+        private UnitDefinition unitType;
         private UnitTargetable combatTarget;
         private List<SquadMember> squadMembers;
 
+        public void Spawn( UnitDefinition definition )
+        {
+
+        }
         protected override void Start()
         {
             base.Start();
