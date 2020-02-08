@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Fakejam.Units
 {
@@ -8,7 +9,8 @@ namespace Fakejam.Units
         [SerializeField] private int _maxHealth;
         [SerializeField] private int _damage;
         [SerializeField] private int _defense;
-        [SerializeField] private float _range;
+        [SerializeField] private float _attackRange;
+        [SerializeField] private float _viewRange;
         [SerializeField, Tooltip("Units/second")] private float _movementSpeed;
 
         [Header("To Spawn")] [SerializeField] private GameObject _prefabOfUnit;
@@ -21,7 +23,8 @@ namespace Fakejam.Units
 
         public int Defense => _defense;
 
-        public float Range => _range;
+        public float AttackRange => _attackRange;
+        public float ViewRange => _viewRange;
 
         public float MovementSpeed => _movementSpeed;
 
