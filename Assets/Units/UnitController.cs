@@ -71,7 +71,7 @@ namespace Units
             }
         }
 
-        void Move(Vector3 position)
+        public void Move(Vector3 position)
         {
             if (gameObject.activeSelf == false)
             {

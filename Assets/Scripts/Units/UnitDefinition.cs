@@ -1,3 +1,4 @@
+using Fakejam.Input;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -12,8 +13,9 @@ namespace Fakejam.Units
         [SerializeField] private float _attackSpeed;
         [SerializeField] private float _attackRange;
         [SerializeField, Tooltip("Units/second")] private float _movementSpeed;
+        [SerializeField] private int _squadSize;
 
-        [Header("To Spawn")] [SerializeField] private GameObject _prefabOfUnit;
+        [Header("To Spawn")] [SerializeField] private SquadMember _prefabOfUnit;
 
         [Header("Unit Icon")] [SerializeField] private Sprite _icon;
 
@@ -31,7 +33,9 @@ namespace Fakejam.Units
 
         public float MovementSpeed => _movementSpeed;
 
-        public GameObject PrefabOfUnit => _prefabOfUnit;
+        public float SquadSize => _squadSize;
+
+        public SquadMember PrefabOfUnit => _prefabOfUnit;
 
         public Sprite Icon => _icon;
 

@@ -18,7 +18,8 @@ MonoBehaviour:
   _attackSpeed: 0.75
   _attackRange: 2
   _movementSpeed: 2
-  _prefabOfUnit: {fileID: 6182822612013540460, guid: 20e8ef95d69704752ad83537b4070809,
+  _squadSize: 8
+  _prefabOfUnit: {fileID: 4473551427573061787, guid: 20e8ef95d69704752ad83537b4070809,
     type: 3}
   _icon: {fileID: 0}
   _squadBehavior: {fileID: 11400000, guid: 72c04987c9bb241758ef6b5449066bef, type: 2}
