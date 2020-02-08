@@ -13,6 +13,7 @@ namespace Fakejam.Input
         {
             unitOrdersInputManager = GetComponent<UnitOrdersInputManager>();
             unitInfoInputManager = GetComponent<UnitInfoInputManager>();
+            Toolbox.Get<InputManager>().CombatInputManager = this;
         }
 
         public void onDeselect() {
