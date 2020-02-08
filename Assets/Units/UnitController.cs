@@ -42,6 +42,7 @@ namespace Units
         void Move(Vector3 position)
         {
             Debug.Log("Move to position " + position);
+            _navMeshAgent.destination = position;
         }
 
     }
