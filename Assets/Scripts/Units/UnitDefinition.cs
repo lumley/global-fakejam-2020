@@ -9,6 +9,7 @@ namespace Fakejam.Units
         [SerializeField] private int _maxHealth;
         [SerializeField] private int _damage;
         [SerializeField] private int _defense;
+        [SerializeField] private float _attackSpeed;
         [SerializeField] private float _attackRange;
         [SerializeField] private float _viewRange;
         [SerializeField, Tooltip("Units/second")] private float _movementSpeed;
@@ -22,6 +23,8 @@ namespace Fakejam.Units
         public int Damage => _damage;
 
         public int Defense => _defense;
+
+        public float AttackSpeed => _attackSpeed;
 
         public float AttackRange => _attackRange;
         public float ViewRange => _viewRange;
