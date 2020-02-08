@@ -26,11 +26,16 @@ namespace Units
         private bool _alreadyStarted = false;
 
         // Start is called before the first frame update
-        void Start()
+        private void Awake()
         {
             playerType = PlayerType.Player;
             _navMeshAgent = GetComponent<NavMeshAgent>();
             _navMeshAgent.speed = unitDefinition.MovementSpeed;
+        }
+
+        void Start()
+        {
+            
 
             _health = unitDefinition.MaxHealth;
             _attackCoroutine = StartCoroutine(AttackRepeat());
@@ -112,7 +117,7 @@ namespace Units
             }
         }
 
-        void Move(Vector3 position)
+        public void Move(Vector3 position)
         {
             if (gameObject.activeSelf == false)
             {
