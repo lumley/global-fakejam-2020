@@ -15,5 +15,9 @@ MonoBehaviour:
   _maxHealth: 10
   _damage: 2
   _defense: 0
-  _range: 1
+  _attackRange: 2
+  _viewRange: 10
   _movementSpeed: 2
+  _prefabOfUnit: {fileID: 677165981643067811, guid: 1b5ac493f49db4d748e844c8dfd51e18,
+    type: 3}
+  _icon: {fileID: 0}

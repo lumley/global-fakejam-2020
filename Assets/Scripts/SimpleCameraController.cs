@@ -8,7 +8,7 @@ namespace UnityTemplateProjects
         {
             public float yaw;
             public float pitch;
-            public float roll;
+            private float _roll;
             public float x;
             public float y;
             public float z;
@@ -17,7 +17,7 @@ namespace UnityTemplateProjects
             {
                 pitch = t.eulerAngles.x;
                 yaw = t.eulerAngles.y;
-                roll = t.eulerAngles.z;
+                _roll = t.eulerAngles.z;
                 x = t.position.x;
                 y = t.position.y;
                 z = t.position.z;
@@ -25,7 +25,7 @@ namespace UnityTemplateProjects
 
             public void Translate(Vector3 translation)
             {
-                Vector3 rotatedTranslation = Quaternion.Euler(pitch, yaw, roll) * translation;
+                Vector3 rotatedTranslation = Quaternion.Euler(pitch, yaw, _roll) * translation;
 
                 x += rotatedTranslation.x;
                 y += rotatedTranslation.y;
@@ -36,7 +36,7 @@ namespace UnityTemplateProjects
             {
                 yaw = Mathf.Lerp(yaw, target.yaw, rotationLerpPct);
                 pitch = Mathf.Lerp(pitch, target.pitch, rotationLerpPct);
-                roll = Mathf.Lerp(roll, target.roll, rotationLerpPct);
+                _roll = Mathf.Lerp(_roll, target._roll, rotationLerpPct);
                 
                 x = Mathf.Lerp(x, target.x, positionLerpPct);
                 y = Mathf.Lerp(y, target.y, positionLerpPct);
@@ -45,7 +45,7 @@ namespace UnityTemplateProjects
 
             public void UpdateTransform(Transform t)
             {
-                t.eulerAngles = new Vector3(pitch, yaw, roll);
+                t.eulerAngles = new Vector3(pitch, yaw, _roll);
                 t.position = new Vector3(x, y, z);
             }
         }
