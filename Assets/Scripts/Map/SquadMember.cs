@@ -13,6 +13,8 @@ namespace Fakejam.Input
 
         public UnitController.UnitEvent OnUnitDied => unitController.OnUnitDied;
 
+        public UnitController UnitController => unitController;
+
         public void TeleportTo(Vector3 pos)
         {
             this.transform.position = pos;

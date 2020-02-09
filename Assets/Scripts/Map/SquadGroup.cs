@@ -46,9 +46,18 @@ namespace Fakejam.Input
             }
         }
 
-        private void OnSquadMemberDied(UnitController squadMember)
+        private void OnSquadMemberDied(UnitController unitController)
         {
-            squadMembers.Remove(squadMember.GetComponent<SquadMember>());
+            for (var i = squadMembers.Count - 1; i >= 0; i--)
+            {
+                var squadMember = squadMembers[i];
+                if (squadMember.UnitController == unitController)
+                {
+                    squadMembers.RemoveAt(i);
+                    break;
+                }
+            }
+
             if (squadMembers.Count == 0)
             {
                 OnSquadDied?.Invoke(this);
