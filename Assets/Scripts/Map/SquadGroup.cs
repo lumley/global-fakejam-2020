@@ -55,6 +55,18 @@ namespace Fakejam.Input
             
         }
 
+        public void setTargetVec(Vector3 targetVec)
+        {
+            
+            combatTarget = null;
+            transform.position = targetVec;
+            foreach (var member in squadMembers)
+            {
+                member.setTargetPos(getRandomPositionInBounds(transform.position, influence.Zone.radius));
+            }
+
+        }
+
         public Vector3 getRandomPositionInBounds(Vector3 center, float mag) {
             return new Vector3(
                         Random.Range(center.x - mag/2, center.x + mag/2),

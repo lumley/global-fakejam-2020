@@ -43,11 +43,25 @@ namespace Fakejam.Input
                     return;
                 }
             }
+            //else
+            //{
+                
+            //    Debug.Log($"Assigning Flag As Target for {sourceSquad.name}", clickedFlag);
+            //    sourceSquad.setTarget(clickedFlag.Targetable);
+            //    sourceSquad = null;
+            //}
+        }
+
+        public void MapClicked(Vector3 targetVec)
+        {
+            Debug.Log("Map Clicked");
+            if (sourceSquad == null)
+            {
+                return;
+            }
             else
             {
-                
-                Debug.Log($"Assigning Flag As Target for {sourceSquad.name}", clickedFlag);
-                sourceSquad.setTarget(clickedFlag.Targetable);
+                sourceSquad.setTargetVec(targetVec);
                 sourceSquad = null;
             }
         }
