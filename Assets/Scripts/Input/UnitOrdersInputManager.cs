@@ -38,16 +38,30 @@ namespace Fakejam.Input
                 var targetSquad = clickedFlag.Targetable as SquadGroup;
                 if(targetSquad && targetSquad.owner == PlayerType.Player)
                 {
-                    Debug.Log("Selecting Player Unit For Orders", targetSquad);
+                    //Debug.Log("Selecting Player Unit For Orders", targetSquad);
                     sourceSquad = targetSquad;
                     return;
                 }
             }
+            //else
+            //{
+                
+            //    Debug.Log($"Assigning Flag As Target for {sourceSquad.name}", clickedFlag);
+            //    sourceSquad.setTarget(clickedFlag.Targetable);
+            //    sourceSquad = null;
+            //}
+        }
+
+        public void MapClicked(Vector3 targetVec)
+        {
+            //Debug.Log("Map Clicked");
+            if (sourceSquad == null)
+            {
+                return;
+            }
             else
             {
-                
-                Debug.Log($"Assigning Flag As Target for {sourceSquad.name}", clickedFlag);
-                sourceSquad.setTarget(clickedFlag.Targetable);
+                sourceSquad.setTargetVec(targetVec);
                 sourceSquad = null;
             }
         }

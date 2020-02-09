@@ -8,13 +8,14 @@ namespace Fakejam.Input
     {
         private UnitOrdersInputManager unitOrdersInputManager;
         private UnitInfoInputManager unitInfoInputManager;
-
+        public MapClick clickCatcher;
 
         private void Start()
         {
             unitOrdersInputManager = GetComponent<UnitOrdersInputManager>();
             unitInfoInputManager = GetComponent<UnitInfoInputManager>();
             Toolbox.Get<InputManager>().CombatInputManager = this;
+            clickCatcher.mapClickedEvent.AddListener(OnMapClicked);
         }
 
         public void onDeselect() {
@@ -45,6 +46,14 @@ namespace Fakejam.Input
         public void OnSurfaceClicked(CombatControlSurface targetSurface)
         {
             unitOrdersInputManager.SurfaceClicked( targetSurface );
+        }
+
+        public void OnMapClicked(Vector3 vec)
+        {
+            if(unitOrdersInputManager.isWaitingForTarget)
+            {
+                unitOrdersInputManager.MapClicked(vec);
+            }
         }
     }
 }

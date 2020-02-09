@@ -8006,7 +8006,7 @@ GameObject:
   - component: {fileID: 2977783704839046122}
   - component: {fileID: 7088333531997879520}
   - component: {fileID: 5293769357622102083}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Grid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8053,7 +8053,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65fdb7f29a5874acaa9118744db1f4ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _grid: {fileID: 0}
+  mapClickedEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1839735485 &7088333531997879520
 Tilemap:
   m_ObjectHideFlags: 0

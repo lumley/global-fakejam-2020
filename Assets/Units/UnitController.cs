@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using Fakejam.GameUtilities;
 using Fakejam.Input;
@@ -6,6 +7,7 @@ using Fakejam.Players;
 using Fakejam.Units;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Events;
 
 namespace Units
 {
@@ -37,6 +39,11 @@ namespace Units
 
         public int Health => _health;
 
+        public SpriteRenderer displaySprite;
+
+        public UnitEvent OnUnitDied;
+        private Transform _transformWhereToSpawnShots;
+
         private void Awake()
         {
             playerType = PlayerType.Player;
@@ -47,7 +54,7 @@ namespace Units
             _poolingManager = Toolbox.Get<PoolingManager>();
             _healthBar = GetComponentInChildren<HealthBar>();
             _healthBar.SetHealth(1);
-
+            _transformWhereToSpawnShots = Toolbox.Get<InputManager>().CombatSceneManager.transform;
             
             _navMeshAgent = GetComponent<NavMeshAgent>();
             _navMeshAgent.speed = unitDefinition.MovementSpeed;
@@ -60,6 +67,9 @@ namespace Units
         public void setOwner(PlayerType type)
         {
             playerType = type;
+            displaySprite.color = playerType == PlayerType.Player ?
+                new Color(1, 1, 1) :
+                new Color(1, 0.5f, 0.5f);
         }
 
         private void OnDisable()
@@ -113,15 +123,13 @@ namespace Units
             }
 
             var objectName = transform.parent.name;
-            Debug.Log(objectName + " health " + _health);
             _health -= damage;
 
             _healthBar.SetHealth(_health/(float)unitDefinition.MaxHealth);
-            Debug.Log("Unit '" + objectName + " took " + damage + "damage");
             if (_health <= 0)
             {
-                Debug.Log("Unit '" + objectName + "' died");
                 transform.parent.gameObject.SetActive(false);
+                OnUnitDied?.Invoke(this);
             }
         }
 
@@ -139,8 +147,14 @@ namespace Units
 
         public void Shoot(UnitController enemy)
         {
-            var shot = _poolingManager.Create(UnitDefinition.ShotPrefab);
+            var shot = _poolingManager.Create(UnitDefinition.ShotPrefab, _transformWhereToSpawnShots);
             shot.SetTarget(transform, enemy, unitDefinition.Damage, UnitDefinition.ShotPrefab);
+        }
+        
+        [Serializable]
+        public class UnitEvent : UnityEvent<UnitController>
+        {
+            
         }
     }
 }

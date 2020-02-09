@@ -22,7 +22,7 @@ MonoBehaviour:
   _influenceRange: 4
   _prefabOfUnit: {fileID: 7978113814463161167, guid: 7cd251031d5e94b02b38b37326974f61,
     type: 3}
-  _icon: {fileID: 21300000, guid: 9142ffa34a0fb4fe78fb3fd2b328c029, type: 3}
+  _icon: {fileID: 1983179003316544293, guid: 032ffa6ad6a4c448893f22e743e75a74, type: 3}
   _squadBehavior: {fileID: 11400000, guid: 72c04987c9bb241758ef6b5449066bef, type: 2}
   _attackBehavior: {fileID: 11400000, guid: 5895cdcc6dd5443bdb3f73df3e36fd38, type: 2}
   _shotPrefab: {fileID: 9108212120662588865, guid: 4e41d1813418748a3ad7c30ea4cbc710,

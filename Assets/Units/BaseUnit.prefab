@@ -53,6 +53,7 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 512
+  displaySprite: {fileID: 5859407549587306206}
 --- !u!195 &6547944558766945931
 NavMeshAgent:
   m_ObjectHideFlags: 0
