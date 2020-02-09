@@ -47,8 +47,15 @@ MonoBehaviour:
   - _enemies:
     - Owner: 1
       UnitDefinition: {fileID: 11400000, guid: 9d7104ac63d3a44319df36699f13e70f, type: 2}
-      Count: 8
+      Count: 4
   - _enemies:
+    - Owner: 1
+      UnitDefinition: {fileID: 11400000, guid: 9d7104ac63d3a44319df36699f13e70f, type: 2}
+      Count: 4
+  - _enemies:
+    - Owner: 1
+      UnitDefinition: {fileID: 11400000, guid: 850cca1dd3e964cb598bd89ee577b410, type: 2}
+      Count: 2
     - Owner: 1
       UnitDefinition: {fileID: 11400000, guid: 9d7104ac63d3a44319df36699f13e70f, type: 2}
       Count: 8
@@ -58,7 +65,78 @@ MonoBehaviour:
       Count: 5
     - Owner: 1
       UnitDefinition: {fileID: 11400000, guid: 9d7104ac63d3a44319df36699f13e70f, type: 2}
+      Count: 10
+    - Owner: 1
+      UnitDefinition: {fileID: 11400000, guid: 9d7104ac63d3a44319df36699f13e70f, type: 2}
+      Count: 2
+  - _enemies:
+    - Owner: 1
+      UnitDefinition: {fileID: 11400000, guid: 850cca1dd3e964cb598bd89ee577b410, type: 2}
+      Count: 10
+    - Owner: 1
+      UnitDefinition: {fileID: 11400000, guid: 9d7104ac63d3a44319df36699f13e70f, type: 2}
+      Count: 10
+    - Owner: 1
+      UnitDefinition: {fileID: 11400000, guid: 9d7104ac63d3a44319df36699f13e70f, type: 2}
+      Count: 5
+  - _enemies:
+    - Owner: 1
+      UnitDefinition: {fileID: 11400000, guid: 850cca1dd3e964cb598bd89ee577b410, type: 2}
+      Count: 10
+    - Owner: 1
+      UnitDefinition: {fileID: 11400000, guid: 9d7104ac63d3a44319df36699f13e70f, type: 2}
+      Count: 10
+    - Owner: 1
+      UnitDefinition: {fileID: 11400000, guid: 9d7104ac63d3a44319df36699f13e70f, type: 2}
+      Count: 5
+    - Owner: 1
+      UnitDefinition: {fileID: 11400000, guid: 9d7104ac63d3a44319df36699f13e70f, type: 2}
+      Count: 5
+  - _enemies:
+    - Owner: 1
+      UnitDefinition: {fileID: 11400000, guid: 850cca1dd3e964cb598bd89ee577b410, type: 2}
       Count: 15
+    - Owner: 1
+      UnitDefinition: {fileID: 11400000, guid: 9d7104ac63d3a44319df36699f13e70f, type: 2}
+      Count: 15
+    - Owner: 1
+      UnitDefinition: {fileID: 11400000, guid: 9d7104ac63d3a44319df36699f13e70f, type: 2}
+      Count: 7
+    - Owner: 1
+      UnitDefinition: {fileID: 11400000, guid: 9d7104ac63d3a44319df36699f13e70f, type: 2}
+      Count: 7
+  - _enemies:
+    - Owner: 1
+      UnitDefinition: {fileID: 11400000, guid: 850cca1dd3e964cb598bd89ee577b410, type: 2}
+      Count: 10
+    - Owner: 1
+      UnitDefinition: {fileID: 11400000, guid: 9d7104ac63d3a44319df36699f13e70f, type: 2}
+      Count: 10
+    - Owner: 1
+      UnitDefinition: {fileID: 11400000, guid: 9d7104ac63d3a44319df36699f13e70f, type: 2}
+      Count: 10
+    - Owner: 1
+      UnitDefinition: {fileID: 11400000, guid: 850cca1dd3e964cb598bd89ee577b410, type: 2}
+      Count: 10
+  - _enemies:
+    - Owner: 1
+      UnitDefinition: {fileID: 11400000, guid: 850cca1dd3e964cb598bd89ee577b410, type: 2}
+      Count: 10
+    - Owner: 1
+      UnitDefinition: {fileID: 11400000, guid: 9d7104ac63d3a44319df36699f13e70f, type: 2}
+      Count: 10
+    - Owner: 1
+      UnitDefinition: {fileID: 11400000, guid: 9d7104ac63d3a44319df36699f13e70f, type: 2}
+      Count: 10
+    - Owner: 1
+      UnitDefinition: {fileID: 11400000, guid: 850cca1dd3e964cb598bd89ee577b410, type: 2}
+      Count: 10
+    - Owner: 1
+      UnitDefinition: {fileID: 11400000, guid: 850cca1dd3e964cb598bd89ee577b410, type: 2}
+      Count: 10
+    - Owner: 1
+      UnitDefinition: {fileID: 11400000, guid: 850cca1dd3e964cb598bd89ee577b410, type: 2}
+      Count: 10
   _productionTimeLevels:
   - 15
   - 15
