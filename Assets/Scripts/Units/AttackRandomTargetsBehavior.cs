@@ -1,3 +1,4 @@
+
 using System.Collections.Generic;
 using Units;
 using UnityEngine;
@@ -11,19 +12,38 @@ namespace Fakejam.Units
         
         public override void Attack(UnitController thisUnit, IList<UnitController> enemyTargets)
         {
-            var enemyTargetsCount = enemyTargets.Count;
-            if (enemyTargetsCount == 0)
+            var targetsInRange = enemyTargets.Count;
+            if (targetsInRange == 0)
             {
                 return;
             }
-            
-            var startingEnemy = Random.Range(0, enemyTargetsCount);
-            for (int i = 0; i < _targetCount; i++)
+
+            List<int> indexes = getIndexesToShoot(_targetCount, targetsInRange);
+
+            for (int i = 0; i < indexes.Count; i++)
             {
-                int index = (i + startingEnemy) % enemyTargetsCount;
-                var unitController = enemyTargets[index];
-                thisUnit.Shoot(unitController);
+                
+                thisUnit.Shoot(enemyTargets[i]);
             }
+        }
+
+        private List<int> getIndexesToShoot(int numShots, int numValidTargets)
+        {
+            List<int> indexList = new List<int>();
+            int validShots = Mathf.Min(numShots, numValidTargets);
+            int numTries = validShots * 3;
+
+            while(indexList.Count < validShots && numTries > 0)
+            {
+                int randIndex = Random.Range(0, validShots);
+                if (!indexList.Contains(randIndex))
+                {
+                    indexList.Add(randIndex);
+                }
+                numTries--;
+            }
+
+            return indexList;
         }
     }
 }

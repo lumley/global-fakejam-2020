@@ -15,7 +15,7 @@ MonoBehaviour:
   _maxHealth: 75
   _damage: 75
   _defense: 0
-  _attackSpeed: 2
+  _attackSpeed: 1
   _attackRange: 5
   _movementSpeed: 1
   _squadSize: 4
