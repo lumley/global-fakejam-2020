@@ -11,6 +11,8 @@ namespace Fakejam.Input
         [SerializeField]
         private UnitController unitController;
 
+        public UnitController.UnitEvent OnUnitDied => unitController.OnUnitDied;
+
         public void TeleportTo(Vector3 pos)
         {
             this.transform.position = pos;
