@@ -263,9 +263,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3f697f8795fa46cfabec1cea1c6f9d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chanceToChangeTarget: 1
-  minDecisionTime: 2
-  maxDecisionTime: 5
+  percentChanceToChangeATarget: 0.8
+  minDecisionSeconds: 2
+  maxDecisionSeconds: 5
 --- !u!1 &174901333
 GameObject:
   m_ObjectHideFlags: 0

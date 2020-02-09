@@ -7,9 +7,9 @@ public class EnemySquadManager : MonoBehaviour
 {    
     private float _currentTimeLeft;
 
-    public float chanceToChangeTarget;
-    public float minDecisionTime;
-    public float maxDecisionTime;
+    public float percentChanceToChangeATarget;
+    public float minDecisionSeconds;
+    public float maxDecisionSeconds;
 
     
     private void Update()
@@ -23,10 +23,9 @@ public class EnemySquadManager : MonoBehaviour
         var deltaTime = Time.deltaTime;
         _currentTimeLeft -= deltaTime;
 
-        Debug.Log($"time: { _currentTimeLeft}");
         if (_currentTimeLeft <= 0)
         {
-            if(Random.Range(0.0f,1.0f) < chanceToChangeTarget)
+            if(Random.Range(0.0f,1.0f) < percentChanceToChangeATarget)
             {
                 chooseNewTarget();
             }
@@ -37,7 +36,7 @@ public class EnemySquadManager : MonoBehaviour
 
     public void resetTimer()
     {
-        _currentTimeLeft = Random.Range(minDecisionTime, maxDecisionTime);
+        _currentTimeLeft = Random.Range(minDecisionSeconds, maxDecisionSeconds);
     }
 
     private void chooseNewTarget()
