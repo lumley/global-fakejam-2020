@@ -7,10 +7,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2831792842843162540, guid: ddea8ce13930a482b978f8f968a5681e,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 603246180932034874, guid: f414fe848067b4c89aa1fa1bd5924804,
+        type: 3}
     - target: {fileID: 2955238595036918065, guid: ddea8ce13930a482b978f8f968a5681e,
         type: 3}
       propertyPath: m_Name
-      value: UnitProduction
+      value: MacemanProduction
       objectReference: {fileID: 0}
     - target: {fileID: 5705374425953645922, guid: ddea8ce13930a482b978f8f968a5681e,
         type: 3}
