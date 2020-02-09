@@ -11,6 +11,7 @@ namespace Fakejam.Production
     {
         [SerializeField] private ProductionBuilding _productionPrefab;
         [SerializeField] private Transform[] _transformsWhereToSpawn;
+        [SerializeField] private Transform _transformWhereUnitsWillWalk;
         public UnityEvent OnProductionsWritten;
 
         private List<ProductionBuilding> _productionBuildings = new List<ProductionBuilding>();
@@ -24,7 +25,7 @@ namespace Fakejam.Production
             foreach (var squad in squadsForOwner)
             {
                 unitToCountMap.TryGetValue(squad.UnitDefinition, out int count);
-                unitToCountMap[squad.UnitDefinition] = count;
+                unitToCountMap[squad.UnitDefinition] = count + squad.Count;
             }
             
             var allUnitDefinitions = battleManager.AllUnitDefinitions;
@@ -34,7 +35,7 @@ namespace Fakejam.Production
                 unitToCountMap.TryGetValue(unitDefinition, out int unitCount);
                 var transformWhereToSpawn = _transformsWhereToSpawn[i];
                 var productionBuilding = Instantiate(_productionPrefab, transformWhereToSpawn);
-                productionBuilding.SetProduction(unitDefinition, unitCount);
+                productionBuilding.SetProduction(unitDefinition, unitCount, _transformWhereUnitsWillWalk);
                 _productionBuildings.Add(productionBuilding);
             }
         }

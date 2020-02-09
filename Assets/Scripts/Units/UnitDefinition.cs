@@ -12,8 +12,13 @@ namespace Fakejam.Units
         [SerializeField] private int _defense;
         [SerializeField] private float _attackSpeed;
         [SerializeField] private float _attackRange;
+        
         [SerializeField, Tooltip("Units/second")] private float _movementSpeed;
+
+        [Header("Squad Vars")]
+
         [SerializeField] private int _squadSize;
+        [SerializeField] private float _influenceRange;
 
         [Header("To Spawn")] [SerializeField] private SquadMember _prefabOfUnit;
 
@@ -23,6 +28,9 @@ namespace Fakejam.Units
 
         [Header("Production")] [SerializeField]
         private float _productionTime;
+
+        [SerializeField]
+        private GameObject _prefabOfProductionUnit;
 
         public int MaxHealth => _maxHealth;
 
@@ -37,6 +45,7 @@ namespace Fakejam.Units
         public float MovementSpeed => _movementSpeed;
 
         public float SquadSize => _squadSize;
+        public float InfluenceRange => _influenceRange;
 
         public SquadMember PrefabOfUnit => _prefabOfUnit;
 
@@ -45,5 +54,7 @@ namespace Fakejam.Units
         public SquadBehavior SquadBehavior => _squadBehavior;
 
         public float ProductionTime => _productionTime;
+
+        public GameObject PrefabOfProductionUnit => _prefabOfProductionUnit;
     }
 }

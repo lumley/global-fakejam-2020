@@ -12,6 +12,12 @@ namespace Fakejam.Input
         private UnitTargetable combatTarget;
         private List<SquadMember> squadMembers;
 
+        [SerializeField]
+        private CircleCollider2D influenceRange;
+
+        [SerializeField]
+        private GameObject influenceContainer;
+
         private void createSquadMembers()
         {
             BattleManager battleManager = Toolbox.Get<BattleManager>();
@@ -21,13 +27,9 @@ namespace Fakejam.Input
                 SquadMember newMember = Instantiate(unitType.PrefabOfUnit, battleManager.combatUnitsContainer.transform);
                 squadMembers.Add(newMember);
 
-                Collider2D spawnArea = battleManager.playerSpawnArea;
-
-                newMember.setTargetPos(new Vector3(
-                    Random.Range(spawnArea.bounds.min.x, spawnArea.bounds.size.x),
-                    Random.Range(spawnArea.bounds.min.y, spawnArea.bounds.size.y),
-                    1f
-                ));
+                //Collider2D spawnArea = battleManager.playerSpawnArea;
+                newMember.setOwner(owner);
+                newMember.TeleportTo(getRandomPositionInBounds(transform.position, influenceRange.radius));
             }
         }
 
@@ -35,13 +37,27 @@ namespace Fakejam.Input
         {
             base.Start();
             combatTarget = null;
+            influenceContainer.transform.localScale = new Vector3(unitType.InfluenceRange, unitType.InfluenceRange, 1f);
             createSquadMembers();
         }
 
-        public void setTarget(UnitTargetable target )
+        public void setTarget(UnitTargetable target)
         {
             Debug.Log($"Target set: {target.name}", target);
             combatTarget = target;
+            transform.position = combatTarget.transform.position;
+            foreach (var member in squadMembers)
+            {
+                member.setTargetPos(getRandomPositionInBounds(transform.position, influenceRange.radius));
+            }
+            
+        }
+
+        public Vector3 getRandomPositionInBounds(Vector3 center, float mag) {
+            return new Vector3(
+                        Random.Range(center.x - mag/2, center.x + mag/2),
+                        Random.Range(center.y - mag/2, center.y + mag/2),
+                        1f);
         }
     }
 }

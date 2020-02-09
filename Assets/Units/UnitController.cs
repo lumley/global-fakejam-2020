@@ -41,6 +41,11 @@ namespace Units
             _alreadyStarted = true;
         }
 
+        public void setOwner(PlayerType type)
+        {
+            playerType = type;
+        }
+
         private void OnDisable()
         {
             if (_attackCoroutine != null)
@@ -125,7 +130,7 @@ namespace Units
                 return;
             }
 
-            Debug.Log("Move to position " + position);
+            //Debug.Log("Move to position " + position);
             _navMeshAgent.destination = position;
         }
     }

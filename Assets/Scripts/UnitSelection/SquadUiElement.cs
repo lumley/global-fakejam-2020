@@ -17,7 +17,7 @@ namespace Fakejam.UnitSelection
         {
             _unitName.text = squad.UnitDefinition.name;
             _unitAmount.text = squad.Count.ToString();
-            _unitAmount.interactable = squad.Owner == PlayerType.Player;
+            _unitAmount.interactable = false; // squad.Owner == PlayerType.Player;
             var unitDefinitionIcon = squad.UnitDefinition.Icon;
             if (unitDefinitionIcon != null)
             {
