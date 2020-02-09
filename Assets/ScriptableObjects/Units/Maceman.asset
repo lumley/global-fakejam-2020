@@ -22,6 +22,8 @@ MonoBehaviour:
   _influenceRange: 2
   _prefabOfUnit: {fileID: 3544278728355432433, guid: 20e8ef95d69704752ad83537b4070809,
     type: 3}
+  _prefabOfCorpse: {fileID: 1647021934714075253, guid: e4b552be1523c43cdb998f64022e20fd,
+    type: 3}
   _icon: {fileID: 603246180932034874, guid: f414fe848067b4c89aa1fa1bd5924804, type: 3}
   _squadBehavior: {fileID: 11400000, guid: 72c04987c9bb241758ef6b5449066bef, type: 2}
   _attackBehavior: {fileID: 11400000, guid: 9231074e8484845ffa05c276d424e155, type: 2}

@@ -15,6 +15,7 @@ namespace Fakejam.Input
         private UnitDefinition unitType;
         private UnitTargetable combatTarget;
         private List<SquadMember> squadMembers;
+        private List<GameObject> corpses;
         public SquadInfluence influence;
 
         public SquadEvent OnSquadDied;
@@ -37,6 +38,7 @@ namespace Fakejam.Input
             CombatSceneManager combatManager = Toolbox.Get<InputManager>().CombatSceneManager;
 
             squadMembers = new List<SquadMember>();
+            corpses = new List<GameObject>();
             for (int i = 0; i < numMembers; i++)
             {
                 SquadMember newMember = Instantiate(unitType.PrefabOfUnit, combatManager.squadMemberContainer.transform);
@@ -51,6 +53,7 @@ namespace Fakejam.Input
             }
         }
 
+        
         private void OnSquadMemberDied(UnitController unitController)
         {
             for (var i = squadMembers.Count - 1; i >= 0; i--)

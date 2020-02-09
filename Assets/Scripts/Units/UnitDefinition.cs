@@ -20,7 +20,9 @@ namespace Fakejam.Units
         [SerializeField] private int _squadSize;
         [SerializeField] private float _influenceRange;
 
-        [Header("To Spawn")] [SerializeField] private SquadMember _prefabOfUnit;
+        [Header("To Spawn")]
+        [SerializeField] private SquadMember _prefabOfUnit;
+        [SerializeField] private GameObject _prefabOfCorpse;
 
         [Header("Unit Icon")] [SerializeField] private Sprite _icon;
 
@@ -50,6 +52,7 @@ namespace Fakejam.Units
         public float InfluenceRange => _influenceRange;
 
         public SquadMember PrefabOfUnit => _prefabOfUnit;
+        public GameObject PrefabOfCorpse => _prefabOfCorpse;
 
         public Sprite Icon => _icon;
 

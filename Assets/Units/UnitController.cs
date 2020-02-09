@@ -129,6 +129,12 @@ namespace Units
             if (_health <= 0)
             {
                 transform.parent.gameObject.SetActive(false);
+                
+                CombatSceneManager combatManager = Toolbox.Get<InputManager>().CombatSceneManager;
+                GameObject freshCorpse = Instantiate(unitDefinition.PrefabOfCorpse, combatManager.squadMemberContainer.transform);
+                freshCorpse.transform.position = transform.position;
+
+
                 OnUnitDied?.Invoke(this);
             }
         }
