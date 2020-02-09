@@ -47,9 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   owner: 0
   controlSurface: {fileID: 143290520482854661}
-  unitType: {fileID: 0}
-  influenceRange: {fileID: 1151805636734700306}
-  influenceContainer: {fileID: 4155675341090350589}
+  influence: {fileID: 6631372683663023810}
 --- !u!1 &4155675341090350589
 GameObject:
   m_ObjectHideFlags: 0
@@ -60,6 +58,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7152490284467623807}
   - component: {fileID: 1151805636734700306}
+  - component: {fileID: 6631372683663023810}
   m_Layer: 0
   m_Name: Influence
   m_TagString: Untagged
@@ -98,6 +97,19 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.88
+--- !u!114 &6631372683663023810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4155675341090350589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85b84d82dc06e497ea5777fc22e35ffc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  displaySprite: {fileID: 274962936141030287}
 --- !u!1 &6927244599802422164
 GameObject:
   m_ObjectHideFlags: 0
@@ -167,7 +179,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 10
+  m_SortingOrder: 2
   m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 0.09019608}
   m_FlipX: 0

@@ -33,11 +33,11 @@ public class CombatSceneManager : MonoBehaviour
         playerSquads = new List<SquadGroup>();
         enemySquads = new List<SquadGroup>();
 
-        spawnSquadGroupsFromList(playerSquadDefs, playerSquads, playerSpawnArea);
-        spawnSquadGroupsFromList(enemySquadDefs, enemySquads, enemySpawnArea);
+        spawnSquadGroupsFromList(PlayerType.Player, playerSquadDefs);
+        spawnSquadGroupsFromList(PlayerType.Enemy1, enemySquadDefs);
     }
 
-    private void spawnSquadGroupsFromList( List<Squad> squadDefist, List<SquadGroup> squadGroupList, BoxCollider2D spawnArea)
+    private void spawnSquadGroupsFromList( PlayerType owner, List<Squad> squadDefist)
     {
         foreach (Squad squad in squadDefist)
         {
@@ -47,25 +47,23 @@ public class CombatSceneManager : MonoBehaviour
 
             for (int i = 0; i < numFullSquads; i++)
             {
-                spawnSquadGroup(squad, squad.UnitDefinition.SquadSize, spawnArea, squadGroupList);
+                spawnSquadGroup(owner, squad, squad.UnitDefinition.SquadSize);
             }
             if(numRemaining > 0)
             {
-                spawnSquadGroup(squad, squad.UnitDefinition.SquadSize, spawnArea, squadGroupList);
+                spawnSquadGroup(owner, squad, squad.UnitDefinition.SquadSize);
             }
         }
     }
     
     
-    private void spawnSquadGroup( Squad squadDef, int numMembers, BoxCollider2D spawnArea, List<SquadGroup> squadList )
+    private void spawnSquadGroup( PlayerType owner, Squad squadDef, int numMembers )
     {
+        BoxCollider2D spawnArea = owner == PlayerType.Player ? playerSpawnArea : enemySpawnArea;
+        List<SquadGroup> squadList = owner == PlayerType.Player ? playerSquads : enemySquads;
+
         SquadGroup group = Instantiate(squadPrefab, squadsContainer.transform);
         squadList.Add(group);
-        group.owner = squadDef.Owner;
-
-        group.name =
-            (squadDef.Owner == PlayerType.Player ? "P_" : "E_") +
-            (squadDef.UnitDefinition.PrefabOfUnit.name);
 
         group.transform.position = new Vector3(
 
@@ -73,6 +71,10 @@ public class CombatSceneManager : MonoBehaviour
             Random.Range(spawnArea.bounds.min.y, spawnArea.bounds.max.y),
             1f);
 
-        group.spawnMembers(squadDef.UnitDefinition, numMembers);
+        group.spawnMembers(squadDef.Owner, squadDef.UnitDefinition, numMembers);
+
+        group.name =
+            (squadDef.Owner == PlayerType.Player ? "P_" : "E_") +
+            (squadDef.UnitDefinition.PrefabOfUnit.name);
     }
 }

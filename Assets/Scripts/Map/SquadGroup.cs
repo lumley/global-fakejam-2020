@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Fakejam.Units;
+using Fakejam.Players;
 
 namespace Fakejam.Input
 {
@@ -11,17 +12,14 @@ namespace Fakejam.Input
         private UnitDefinition unitType;
         private UnitTargetable combatTarget;
         private List<SquadMember> squadMembers;
+        public SquadInfluence influence;
 
-        [SerializeField]
-        private CircleCollider2D influenceRange;
-
-        [SerializeField]
-        private GameObject influenceContainer;
-
-        public void spawnMembers(UnitDefinition unit, int numMembers)
+        public void spawnMembers(PlayerType owner, UnitDefinition unit, int numMembers)
         {
+            this.owner = owner;
+            influence.setColorToOwner(this.owner);
             unitType = unit;
-            influenceContainer.transform.localScale = new Vector3(unitType.InfluenceRange, unitType.InfluenceRange, 1f);
+            influence.transform.localScale = new Vector3(unitType.InfluenceRange, unitType.InfluenceRange, 1f);
 
             CombatSceneManager combatManager = Toolbox.Get<InputManager>().CombatSceneManager;
 
@@ -31,8 +29,11 @@ namespace Fakejam.Input
                 SquadMember newMember = Instantiate(unitType.PrefabOfUnit, combatManager.squadMemberContainer.transform);
                 squadMembers.Add(newMember);
 
-                newMember.setOwner(owner);
-                newMember.TeleportTo(getRandomPositionInBounds(transform.position, influenceRange.radius));
+                newMember.setOwner(this.owner);
+                newMember.TeleportTo(getRandomPositionInBounds(transform.position, influence.Zone.radius));
+                newMember.name =
+                    (owner == PlayerType.Player ? "PM-" : "EM-") +
+                    (unitType.PrefabOfUnit.name);
             }
         }
 
@@ -41,6 +42,7 @@ namespace Fakejam.Input
             combatTarget = null;
         }
 
+        
         public void setTarget(UnitTargetable target)
         {
             Debug.Log($"Target set: {target.name}", target);
@@ -48,7 +50,7 @@ namespace Fakejam.Input
             transform.position = combatTarget.transform.position;
             foreach (var member in squadMembers)
             {
-                member.setTargetPos(getRandomPositionInBounds(transform.position, influenceRange.radius));
+                member.setTargetPos(getRandomPositionInBounds(transform.position, influence.Zone.radius));
             }
             
         }
