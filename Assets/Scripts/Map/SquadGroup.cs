@@ -60,6 +60,7 @@ namespace Fakejam.Input
 
             if (squadMembers.Count == 0)
             {
+                gameObject.SetActive(false);
                 OnSquadDied?.Invoke(this);
             }
         }

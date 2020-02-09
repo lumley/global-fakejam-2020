@@ -42,6 +42,7 @@ namespace Units
         public SpriteRenderer displaySprite;
 
         public UnitEvent OnUnitDied;
+        private Transform _transformWhereToSpawnShots;
 
         private void Awake()
         {
@@ -53,7 +54,7 @@ namespace Units
             _poolingManager = Toolbox.Get<PoolingManager>();
             _healthBar = GetComponentInChildren<HealthBar>();
             _healthBar.SetHealth(1);
-
+            _transformWhereToSpawnShots = Toolbox.Get<InputManager>().CombatSceneManager.transform;
             
             _navMeshAgent = GetComponent<NavMeshAgent>();
             _navMeshAgent.speed = unitDefinition.MovementSpeed;
@@ -146,7 +147,7 @@ namespace Units
 
         public void Shoot(UnitController enemy)
         {
-            var shot = _poolingManager.Create(UnitDefinition.ShotPrefab);
+            var shot = _poolingManager.Create(UnitDefinition.ShotPrefab, _transformWhereToSpawnShots);
             shot.SetTarget(transform, enemy, unitDefinition.Damage, UnitDefinition.ShotPrefab);
         }
         
