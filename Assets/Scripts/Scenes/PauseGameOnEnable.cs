@@ -1,19 +1,21 @@
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Fakejam.Scenes
 {
     public class PauseGameOnEnable : MonoBehaviour
     {
-        [SerializeField] private float _timeScale = 1f;
+        [FormerlySerializedAs("_timeScale")] [SerializeField] private float _valueWhenDisabled = 1f;
+        [SerializeField] private float _valueWhenEnabled = 0f;
         
         private void OnEnable()
         {
-            Time.timeScale = 0;
+            Time.timeScale = _valueWhenEnabled;
         }
 
         private void OnDisable()
         {
-            Time.timeScale = _timeScale;
+            Time.timeScale = _valueWhenDisabled;
         }
     }
 }
