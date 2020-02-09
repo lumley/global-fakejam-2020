@@ -23,19 +23,18 @@ namespace Units
         [SerializeField] private LayerMask layerMask;
         private Coroutine _attackCoroutine;
 
-        private bool _alreadyStarted = false;
+        private HealthBar _healthBar;
 
-        // Start is called before the first frame update
-        private void Awake()
-        {
-            playerType = PlayerType.Player;
-            _navMeshAgent = GetComponent<NavMeshAgent>();
-            _navMeshAgent.speed = unitDefinition.MovementSpeed;
-        }
+        private bool _alreadyStarted = false;
 
         void Start()
         {
-            
+            _healthBar = GetComponentInChildren<HealthBar>();
+            _healthBar.SetHealth(1);
+
+            playerType = PlayerType.Player;
+            _navMeshAgent = GetComponent<NavMeshAgent>();
+            _navMeshAgent.speed = unitDefinition.MovementSpeed;
 
             _health = unitDefinition.MaxHealth;
             _attackCoroutine = StartCoroutine(AttackRepeat());
@@ -109,6 +108,7 @@ namespace Units
             Debug.Log(objectName + " health " + _health);
             _health -= damage;
 
+            _healthBar.SetHealth(_health/(float)unitDefinition.MaxHealth);
             Debug.Log("Unit '" + objectName + " took " + damage + "damage");
             if (_health <= 0)
             {
