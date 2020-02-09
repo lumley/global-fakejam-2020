@@ -518,41 +518,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 704318239772842587, guid: 20e8ef95d69704752ad83537b4070809,
-        type: 3}
-      propertyPath: target
-      value: 
-      objectReference: {fileID: 969128986}
-    - target: {fileID: 704318239772842587, guid: 20e8ef95d69704752ad83537b4070809,
-        type: 3}
-      propertyPath: layerMask.m_Bits
-      value: 512
-      objectReference: {fileID: 0}
-    - target: {fileID: 3754161904170175672, guid: 20e8ef95d69704752ad83537b4070809,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.089151904
-      objectReference: {fileID: 0}
-    - target: {fileID: 3754161904170175672, guid: 20e8ef95d69704752ad83537b4070809,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.9008571
-      objectReference: {fileID: 0}
-    - target: {fileID: 3754161904170175672, guid: 20e8ef95d69704752ad83537b4070809,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0.22153153
-      objectReference: {fileID: 0}
-    - target: {fileID: 3754161904170175672, guid: 20e8ef95d69704752ad83537b4070809,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: -0.36253586
-      objectReference: {fileID: 0}
-    - target: {fileID: 4773094063072942972, guid: 20e8ef95d69704752ad83537b4070809,
-        type: 3}
-      propertyPath: camera
-      value: 
-      objectReference: {fileID: 423064324}
     - target: {fileID: 6182822612013540460, guid: 20e8ef95d69704752ad83537b4070809,
         type: 3}
       propertyPath: m_Name
