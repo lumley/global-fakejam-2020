@@ -25,6 +25,15 @@ namespace Units
 
         private bool _alreadyStarted = false;
 
+        private readonly Collider[] _potentialTargets = new Collider[20];
+        private readonly List<UnitController> _targetUnitControllers = new List<UnitController>();
+
+        public PlayerType PlayerType => playerType;
+
+        public UnitDefinition UnitDefinition => unitDefinition;
+
+        public int Health => _health;
+
         // Start is called before the first frame update
         private void Awake()
         {
@@ -56,34 +65,21 @@ namespace Units
 
         private IEnumerator AttackRepeat()
         {
-            while (true)
+            while (this != null)
             {
                 if (gameObject.activeSelf)
                 {
-                    var targets = Physics.OverlapSphere(transform.position, unitDefinition.AttackRange, layerMask);
-
-                    foreach (Collider target in targets)
+                    int actualTargetCount = Physics.OverlapSphereNonAlloc(transform.position, unitDefinition.AttackRange,_potentialTargets, layerMask);
+                    _targetUnitControllers.Clear();
+                    for (int i = 0; i < actualTargetCount; i++)
                     {
-                        var unitController = target.gameObject.GetComponent<UnitController>();
-
-                        if (unitController == this)
+                        var enemyTarget = _potentialTargets[i].GetComponent<UnitController>();
+                        if (enemyTarget != null && enemyTarget.playerType != playerType)
                         {
-                            continue;
+                            _targetUnitControllers.Add(enemyTarget);
                         }
-
-                        if (unitController == null)
-                        {
-                            Debug.Log("tried to attack non attackable object '" + target.name + "'");
-                            continue;
-                        }
-
-                        if (unitController.playerType != playerType)
-                        {
-                            unitController.TakeDamage(unitDefinition.Damage);
-                        }
-
-                        Debug.Log("attacking " + target.name);
                     }
+                    unitDefinition.AttackBehavior.Attack(this, _targetUnitControllers);
                 }
                 else
                 {
@@ -95,7 +91,7 @@ namespace Units
         }
 
 
-        void TakeDamage(int damage)
+        public void TakeDamage(int damage)
         {
             if (_alreadyStarted == false)
             {
