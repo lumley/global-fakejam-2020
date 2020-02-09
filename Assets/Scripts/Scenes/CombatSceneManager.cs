@@ -105,6 +105,8 @@ public class CombatSceneManager : MonoBehaviour
     private void OnLose()
     {
         WriteAllUnits();
+        var progressionManager = Toolbox.Get<ProgressionManager>();
+        progressionManager.Restart();
         OnPlayerLost?.Invoke();
     }
 

@@ -10,6 +10,11 @@ namespace Fakejam.Units
 
         [SerializeField] private int _currentLevel;
 
+        public void Restart()
+        {
+            _currentLevel = 0;
+        }
+
         public void IncreaseLevel()
         {
             _currentLevel = Math.Min(_currentLevel + 1,  _combatLevels.Length);
