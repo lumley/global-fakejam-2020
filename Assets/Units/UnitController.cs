@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using Fakejam.GameUtilities;
 using Fakejam.Input;
@@ -6,6 +7,7 @@ using Fakejam.Players;
 using Fakejam.Units;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Events;
 
 namespace Units
 {
@@ -38,6 +40,8 @@ namespace Units
         public int Health => _health;
 
         public SpriteRenderer displaySprite;
+
+        public UnitEvent OnUnitDied;
 
         private void Awake()
         {
@@ -118,15 +122,13 @@ namespace Units
             }
 
             var objectName = transform.parent.name;
-            Debug.Log(objectName + " health " + _health);
             _health -= damage;
 
             _healthBar.SetHealth(_health/(float)unitDefinition.MaxHealth);
-            Debug.Log("Unit '" + objectName + " took " + damage + "damage");
             if (_health <= 0)
             {
-                Debug.Log("Unit '" + objectName + "' died");
                 transform.parent.gameObject.SetActive(false);
+                OnUnitDied?.Invoke(this);
             }
         }
 
@@ -146,6 +148,12 @@ namespace Units
         {
             var shot = _poolingManager.Create(UnitDefinition.ShotPrefab);
             shot.SetTarget(transform, enemy, unitDefinition.Damage, UnitDefinition.ShotPrefab);
+        }
+        
+        [Serializable]
+        public class UnitEvent : UnityEvent<UnitController>
+        {
+            
         }
     }
 }

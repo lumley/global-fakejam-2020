@@ -1,8 +1,11 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿using System;
+using UnityEngine;
 using System.Collections.Generic;
 using Fakejam.Units;
 using Fakejam.Players;
+using Units;
+using UnityEngine.Events;
+using Random = UnityEngine.Random;
 
 namespace Fakejam.Input
 {
@@ -13,6 +16,10 @@ namespace Fakejam.Input
         private UnitTargetable combatTarget;
         private List<SquadMember> squadMembers;
         public SquadInfluence influence;
+
+        public SquadEvent OnSquadDied;
+
+        public UnitDefinition UnitType => unitType;
 
         public void spawnMembers(PlayerType owner, UnitDefinition unit, int numMembers)
         {
@@ -29,12 +36,31 @@ namespace Fakejam.Input
             {
                 SquadMember newMember = Instantiate(unitType.PrefabOfUnit, combatManager.squadMemberContainer.transform);
                 squadMembers.Add(newMember);
+                newMember.OnUnitDied.AddListener(OnSquadMemberDied);
 
                 newMember.setOwner(this.owner);
                 newMember.TeleportTo(getRandomPositionInBounds(transform.position, influence.Zone.radius));
                 newMember.name =
                     (owner == PlayerType.Player ? "PM-" : "EM-") +
                     (unitType.PrefabOfUnit.name);
+            }
+        }
+
+        private void OnSquadMemberDied(UnitController unitController)
+        {
+            for (var i = squadMembers.Count - 1; i >= 0; i--)
+            {
+                var squadMember = squadMembers[i];
+                if (squadMember.UnitController == unitController)
+                {
+                    squadMembers.RemoveAt(i);
+                    break;
+                }
+            }
+
+            if (squadMembers.Count == 0)
+            {
+                OnSquadDied?.Invoke(this);
             }
         }
 
@@ -73,6 +99,17 @@ namespace Fakejam.Input
                         Random.Range(center.x - mag/2, center.x + mag/2),
                         Random.Range(center.y - mag/2, center.y + mag/2),
                         1f);
+        }
+
+        public int GetUnitCount()
+        {
+            return squadMembers.Count;
+        }
+        
+        [Serializable]
+        public class SquadEvent : UnityEvent<SquadGroup>
+        {
+            
         }
     }
 }
