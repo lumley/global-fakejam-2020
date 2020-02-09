@@ -73,7 +73,7 @@ public class CombatSceneManager : MonoBehaviour
 
             Random.Range(spawnAreaBounds.min.x, spawnAreaBounds.max.x),
             Random.Range(spawnAreaBounds.min.y, spawnAreaBounds.max.y),
-            1f);
+            0f);
 
         group.spawnMembers(squadDef.Owner, squadDef.UnitDefinition, numMembers);
 

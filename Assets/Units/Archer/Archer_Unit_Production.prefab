@@ -7,6 +7,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 92622442170285379, guid: ddea8ce13930a482b978f8f968a5681e,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 92622442170285379, guid: ddea8ce13930a482b978f8f968a5681e,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 92622442170285379, guid: ddea8ce13930a482b978f8f968a5681e,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 2831792842843162540, guid: ddea8ce13930a482b978f8f968a5681e,
         type: 3}
       propertyPath: m_Sprite
@@ -16,7 +31,7 @@ PrefabInstance:
     - target: {fileID: 2955238595036918065, guid: ddea8ce13930a482b978f8f968a5681e,
         type: 3}
       propertyPath: m_Name
-      value: ArcherProduction
+      value: Archer_Unit_Production
       objectReference: {fileID: 0}
     - target: {fileID: 5705374425953645922, guid: ddea8ce13930a482b978f8f968a5681e,
         type: 3}

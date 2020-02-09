@@ -31,24 +31,34 @@ PrefabInstance:
     - target: {fileID: 5512859590200157289, guid: d9f402aa1669f4548b77a3634e7ff4dc,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 2
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 5512859590200157289, guid: d9f402aa1669f4548b77a3634e7ff4dc,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 2
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 5512859590200157289, guid: d9f402aa1669f4548b77a3634e7ff4dc,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 2
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 5859407549587306206, guid: d9f402aa1669f4548b77a3634e7ff4dc,
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -6884256891737033057, guid: 032ffa6ad6a4c448893f22e743e75a74,
+      objectReference: {fileID: -5102509537803006611, guid: 032ffa6ad6a4c448893f22e743e75a74,
         type: 3}
+    - target: {fileID: 5859407549587306206, guid: d9f402aa1669f4548b77a3634e7ff4dc,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 5859407549587306206, guid: d9f402aa1669f4548b77a3634e7ff4dc,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 0.32
+      objectReference: {fileID: 0}
     - target: {fileID: 6916601821607925341, guid: d9f402aa1669f4548b77a3634e7ff4dc,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -158,7 +168,7 @@ PrefabInstance:
     - target: {fileID: 8773313799129322140, guid: d9f402aa1669f4548b77a3634e7ff4dc,
         type: 3}
       propertyPath: m_Name
-      value: Archer
+      value: Archer_Unit
       objectReference: {fileID: 0}
     - target: {fileID: 8788927317285441280, guid: d9f402aa1669f4548b77a3634e7ff4dc,
         type: 3}

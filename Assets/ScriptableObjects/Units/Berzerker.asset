@@ -10,25 +10,25 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5f23be543f2648979feb36ee22cbb45a, type: 3}
-  m_Name: Maceman
+  m_Name: Berzerker
   m_EditorClassIdentifier: 
-  _maxHealth: 10
-  _damage: 2
+  _maxHealth: 30
+  _damage: 0
   _defense: 0
-  _attackSpeed: 0.75
-  _attackRange: 2
-  _movementSpeed: 2
-  _squadSize: 5
-  _influenceRange: 2
-  _prefabOfUnit: {fileID: 3544278728355432433, guid: 20e8ef95d69704752ad83537b4070809,
+  _attackSpeed: 0.25
+  _attackRange: 1
+  _movementSpeed: 4
+  _squadSize: 10
+  _influenceRange: 1
+  _prefabOfUnit: {fileID: 3544278728355432433, guid: aa295f504118544cb99097fc591d6ba7,
     type: 3}
-  _prefabOfCorpse: {fileID: 1647021934714075253, guid: e4b552be1523c43cdb998f64022e20fd,
+  _prefabOfCorpse: {fileID: 1647021934714075253, guid: 5de44faeba26d454db747d1e88570fd2,
     type: 3}
-  _icon: {fileID: 2180035727253629138, guid: 042be21e6ed0e456fbcf0e29c55e52d5, type: 3}
+  _icon: {fileID: -5496443346842798519, guid: 409cc490aba6d4f628ccf89553a14ddb, type: 3}
   _squadBehavior: {fileID: 11400000, guid: 72c04987c9bb241758ef6b5449066bef, type: 2}
   _attackBehavior: {fileID: 11400000, guid: 9231074e8484845ffa05c276d424e155, type: 2}
-  _shotPrefab: {fileID: 9108212120662588865, guid: 4e41d1813418748a3ad7c30ea4cbc710,
+  _shotPrefab: {fileID: 9108212120662588865, guid: 82be468ca68da4c4a8ae27e7adfa78b2,
     type: 3}
   _productionTime: 1
-  _prefabOfProductionUnit: {fileID: 8225825095962130060, guid: ae8989c18af0f4ecebe75ebc35a99b40,
+  _prefabOfProductionUnit: {fileID: 8225825095962130060, guid: 5a5cd48d86d404209aaf781357897c63,
     type: 3}

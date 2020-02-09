@@ -18,7 +18,7 @@ MonoBehaviour:
   _attackSpeed: 1
   _attackRange: 3
   _movementSpeed: 1
-  _squadSize: 8
+  _squadSize: 4
   _influenceRange: 3
   _prefabOfUnit: {fileID: 3544278728355432433, guid: 78f22a87431d84ce2946e5774198fa2f,
     type: 3}

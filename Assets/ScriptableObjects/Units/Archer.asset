@@ -24,7 +24,7 @@ MonoBehaviour:
     type: 3}
   _prefabOfCorpse: {fileID: 9037366272369722511, guid: 043d7b4f94d544ff4ac15119669c866a,
     type: 3}
-  _icon: {fileID: 1983179003316544293, guid: 032ffa6ad6a4c448893f22e743e75a74, type: 3}
+  _icon: {fileID: -7249957088995020776, guid: 032ffa6ad6a4c448893f22e743e75a74, type: 3}
   _squadBehavior: {fileID: 11400000, guid: 72c04987c9bb241758ef6b5449066bef, type: 2}
   _attackBehavior: {fileID: 11400000, guid: 5895cdcc6dd5443bdb3f73df3e36fd38, type: 2}
   _shotPrefab: {fileID: 9108212120662588865, guid: 4e41d1813418748a3ad7c30ea4cbc710,

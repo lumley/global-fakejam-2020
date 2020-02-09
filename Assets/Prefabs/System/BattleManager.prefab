@@ -47,10 +47,17 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 9d7104ac63d3a44319df36699f13e70f, type: 2}
   - {fileID: 11400000, guid: 850cca1dd3e964cb598bd89ee577b410, type: 2}
   - {fileID: 11400000, guid: acfa432fe947e4e1ebe74f87eb705700, type: 2}
+  - {fileID: 11400000, guid: 69c522e210cfa4bcf84865118468c710, type: 2}
   _combatSquads:
   - Owner: 0
     UnitDefinition: {fileID: 11400000, guid: 9d7104ac63d3a44319df36699f13e70f, type: 2}
+    Count: 5
+  - Owner: 0
+    UnitDefinition: {fileID: 11400000, guid: 850cca1dd3e964cb598bd89ee577b410, type: 2}
+    Count: 4
+  - Owner: 0
+    UnitDefinition: {fileID: 11400000, guid: 69c522e210cfa4bcf84865118468c710, type: 2}
     Count: 10
   - Owner: 1
     UnitDefinition: {fileID: 11400000, guid: 9d7104ac63d3a44319df36699f13e70f, type: 2}
-    Count: 8
+    Count: 5

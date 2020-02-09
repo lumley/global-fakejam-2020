@@ -1,43 +1,79 @@
 fileFormatVersion: 2
-guid: 4a417fffb9e26455cac06625ca44e8e4
+guid: 409cc490aba6d4f628ccf89553a14ddb
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6755256547522905175
-    second: Soldier 02-1_0
+      213: -2952730121602807721
+    second: Enemy 04-1_0
   - first:
-      213: 2180035727253629138
-    second: Soldier 02-1_1
+      213: 603246180932034874
+    second: Enemy 04-1_1
   - first:
-      213: 659479557171071342
-    second: Soldier 02-1_2
+      213: -5161489949763356392
+    second: Enemy 04-1_2
   - first:
-      213: -6590666832991784353
-    second: Soldier 02-1_3
+      213: -8740708222697440525
+    second: Enemy 04-1_3
   - first:
-      213: -7529056480212617048
-    second: Soldier 02-1_4
+      213: 6623458078085082728
+    second: Enemy 04-1_4
   - first:
-      213: 8531045576034332222
-    second: Soldier 02-1_5
+      213: -2830400777432795297
+    second: Enemy 04-1_5
   - first:
-      213: -6535788579875426181
-    second: Soldier 02-1_6
+      213: -7287813568785449157
+    second: Enemy 04-1_6
   - first:
-      213: 1246538981673838103
-    second: Soldier 02-1_7
+      213: -2866906920947679445
+    second: Enemy 04-1_7
   - first:
-      213: 7839273274692156646
-    second: Soldier 02-1_8
+      213: 4939714459312616774
+    second: Enemy 04-1_8
   - first:
-      213: -6144530192527908875
-    second: Soldier 02-1_9
+      213: 1188347423493197173
+    second: Enemy 04-1_9
   - first:
-      213: 7521071013033117722
-    second: Soldier 02-1_10
+      213: 4779613494383706331
+    second: Enemy 04-1_10
   - first:
-      213: 581691319504875684
-    second: Soldier 02-1_11
+      213: -7913673970954426626
+    second: Enemy 04-1_11
+  - first:
+      213: -5620391342627164142
+    second: Berzzerker_Sheet_0
+  - first:
+      213: -5496443346842798519
+    second: Berzzerker_Sheet_1
+  - first:
+      213: 1268281351848744627
+    second: Berzzerker_Sheet_2
+  - first:
+      213: -1895923029005988714
+    second: Berzzerker_Sheet_3
+  - first:
+      213: -4177443153911820366
+    second: Berzzerker_Sheet_4
+  - first:
+      213: -6276092483031408487
+    second: Berzzerker_Sheet_5
+  - first:
+      213: 3713038589007099599
+    second: Berzzerker_Sheet_6
+  - first:
+      213: -2724712189972099352
+    second: Berzzerker_Sheet_7
+  - first:
+      213: 4701023275096337906
+    second: Berzzerker_Sheet_8
+  - first:
+      213: -6783412197226979759
+    second: Berzzerker_Sheet_9
+  - first:
+      213: 3968373755767554548
+    second: Berzzerker_Sheet_10
+  - first:
+      213: -1212370987133019556
+    second: Berzzerker_Sheet_11
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -67,7 +103,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: 2
     mipBias: -100
     wrapU: 1
@@ -170,7 +206,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Soldier 02-1_0
+      name: Berzzerker_Sheet_0
       rect:
         serializedVersion: 2
         x: 0
@@ -184,14 +220,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7540cb10a0e7fbd50800000000000000
-      internalID: 6755256547522905175
+      spriteID: 210f60c1adb5002b0800000000000000
+      internalID: -5620391342627164142
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Soldier 02-1_1
+      name: Berzzerker_Sheet_1
       rect:
         serializedVersion: 2
         x: 32
@@ -205,14 +241,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2d8ec9091fa014e10800000000000000
-      internalID: 2180035727253629138
+      spriteID: 946306fb5e5b8b3b0800000000000000
+      internalID: -5496443346842798519
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Soldier 02-1_2
+      name: Berzzerker_Sheet_2
       rect:
         serializedVersion: 2
         x: 64
@@ -226,14 +262,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e6940d5c921f62900800000000000000
-      internalID: 659479557171071342
+      spriteID: 3b6523c7b27d99110800000000000000
+      internalID: 1268281351848744627
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Soldier 02-1_3
+      name: Berzzerker_Sheet_3
       rect:
         serializedVersion: 2
         x: 0
@@ -247,14 +283,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f52739a2f6f3984a0800000000000000
-      internalID: -6590666832991784353
+      spriteID: 69c8d96dc0450b5e0800000000000000
+      internalID: -1895923029005988714
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Soldier 02-1_4
+      name: Berzzerker_Sheet_4
       rect:
         serializedVersion: 2
         x: 32
@@ -268,14 +304,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8a8f21b950b638790800000000000000
-      internalID: -7529056480212617048
+      spriteID: 2bfc2b5a59db606c0800000000000000
+      internalID: -4177443153911820366
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Soldier 02-1_5
+      name: Berzzerker_Sheet_5
       rect:
         serializedVersion: 2
         x: 64
@@ -289,14 +325,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e3ea13280cc546670800000000000000
-      internalID: 8531045576034332222
+      spriteID: 990e96b8327d6e8a0800000000000000
+      internalID: -6276092483031408487
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Soldier 02-1_6
+      name: Berzzerker_Sheet_6
       rect:
         serializedVersion: 2
         x: 0
@@ -310,14 +346,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b7078792ae63c45a0800000000000000
-      internalID: -6535788579875426181
+      spriteID: fc6f5179cec578330800000000000000
+      internalID: 3713038589007099599
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Soldier 02-1_7
+      name: Berzzerker_Sheet_7
       rect:
         serializedVersion: 2
         x: 32
@@ -331,14 +367,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 716a85179989c4110800000000000000
-      internalID: 1246538981673838103
+      spriteID: 8ee498903b0ef2ad0800000000000000
+      internalID: -2724712189972099352
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Soldier 02-1_8
+      name: Berzzerker_Sheet_8
       rect:
         serializedVersion: 2
         x: 64
@@ -352,14 +388,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6ec3d335281bacc60800000000000000
-      internalID: 7839273274692156646
+      spriteID: 2fde5f8f2c36d3140800000000000000
+      internalID: 4701023275096337906
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Soldier 02-1_9
+      name: Berzzerker_Sheet_9
       rect:
         serializedVersion: 2
         x: 0
@@ -373,14 +409,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5ff16b2585e3abaa0800000000000000
-      internalID: -6144530192527908875
+      spriteID: 15edb33fb8a7cd1a0800000000000000
+      internalID: -6783412197226979759
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Soldier 02-1_10
+      name: Berzzerker_Sheet_10
       rect:
         serializedVersion: 2
         x: 32
@@ -394,14 +430,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a18835eec36306860800000000000000
-      internalID: 7521071013033117722
+      spriteID: 4f10280d7ee721730800000000000000
+      internalID: 3968373755767554548
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Soldier 02-1_11
+      name: Berzzerker_Sheet_11
       rect:
         serializedVersion: 2
         x: 64
@@ -415,8 +451,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4a034045c25921800800000000000000
-      internalID: 581691319504875684
+      spriteID: c5a52f7b20bcc2fe0800000000000000
+      internalID: -1212370987133019556
       vertices: []
       indices: 
       edges: []
@@ -424,7 +460,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 7acb09b910bfa4dbc960e0ceb5c45346
+    spriteID: 5e0078af1fe0b4a33993d0570c36daea
     internalID: 0
     vertices: []
     indices: 

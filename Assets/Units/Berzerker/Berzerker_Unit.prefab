@@ -16,12 +16,12 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: 0f8066c02c03a49af986740ee5a3e177, type: 2}
+      objectReference: {fileID: 9100000, guid: d7c4652a948474f0ca62c6eb33ba7bab, type: 2}
     - target: {fileID: 2723239302301363371, guid: d9f402aa1669f4548b77a3634e7ff4dc,
         type: 3}
       propertyPath: unitDefinition
       value: 
-      objectReference: {fileID: 11400000, guid: 9d7104ac63d3a44319df36699f13e70f,
+      objectReference: {fileID: 11400000, guid: 69c522e210cfa4bcf84865118468c710,
         type: 2}
     - target: {fileID: 5512859590200157289, guid: d9f402aa1669f4548b77a3634e7ff4dc,
         type: 3}
@@ -42,8 +42,18 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 6755256547522905175, guid: 042be21e6ed0e456fbcf0e29c55e52d5,
+      objectReference: {fileID: -5620391342627164142, guid: 409cc490aba6d4f628ccf89553a14ddb,
         type: 3}
+    - target: {fileID: 5859407549587306206, guid: d9f402aa1669f4548b77a3634e7ff4dc,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 5859407549587306206, guid: d9f402aa1669f4548b77a3634e7ff4dc,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 0.32
+      objectReference: {fileID: 0}
     - target: {fileID: 8145161309847878163, guid: d9f402aa1669f4548b77a3634e7ff4dc,
         type: 3}
       propertyPath: m_Sprite
@@ -113,7 +123,7 @@ PrefabInstance:
     - target: {fileID: 8773313799129322140, guid: d9f402aa1669f4548b77a3634e7ff4dc,
         type: 3}
       propertyPath: m_Name
-      value: Maceman_Unit
+      value: Berzerker_Unit
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d9f402aa1669f4548b77a3634e7ff4dc, type: 3}

@@ -38,6 +38,42 @@ TextureImporter:
   - first:
       213: -821403965597227022
     second: Enemy 03-1_11
+  - first:
+      213: -5102509537803006611
+    second: Archer_Sheet_0
+  - first:
+      213: -7249957088995020776
+    second: Archer_Sheet_1
+  - first:
+      213: -6032910112889074845
+    second: Archer_Sheet_2
+  - first:
+      213: -3051343476540500974
+    second: Archer_Sheet_3
+  - first:
+      213: -6118971509752836124
+    second: Archer_Sheet_4
+  - first:
+      213: -213291305482507246
+    second: Archer_Sheet_5
+  - first:
+      213: 5717541412174761252
+    second: Archer_Sheet_6
+  - first:
+      213: 4122446434494209705
+    second: Archer_Sheet_7
+  - first:
+      213: -7911799727516830656
+    second: Archer_Sheet_8
+  - first:
+      213: -3031468986848364810
+    second: Archer_Sheet_9
+  - first:
+      213: -2536913226205412802
+    second: Archer_Sheet_10
+  - first:
+      213: -1727512268897469333
+    second: Archer_Sheet_11
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -170,7 +206,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Enemy 03-1_0
+      name: Archer_Sheet_0
       rect:
         serializedVersion: 2
         x: 0
@@ -184,14 +220,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f96ba71d4d43670a0800000000000000
-      internalID: -6884256891737033057
+      spriteID: d6d85301c9e3039b0800000000000000
+      internalID: -5102509537803006611
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy 03-1_1
+      name: Archer_Sheet_1
       rect:
         serializedVersion: 2
         x: 32
@@ -205,14 +241,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 52322b2dbcaa58b10800000000000000
-      internalID: 1983179003316544293
+      spriteID: 81070a1807af26b90800000000000000
+      internalID: -7249957088995020776
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy 03-1_2
+      name: Archer_Sheet_2
       rect:
         serializedVersion: 2
         x: 64
@@ -226,14 +262,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9c8f03722e6581700800000000000000
-      internalID: 511254087026669769
+      spriteID: 36b826f473cc64ca0800000000000000
+      internalID: -6032910112889074845
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy 03-1_3
+      name: Archer_Sheet_3
       rect:
         serializedVersion: 2
         x: 0
@@ -247,14 +283,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2cab31e38e169cc20800000000000000
-      internalID: 3227218258089458370
+      spriteID: 2141919564377a5d0800000000000000
+      internalID: -3051343476540500974
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy 03-1_4
+      name: Archer_Sheet_4
       rect:
         serializedVersion: 2
         x: 32
@@ -268,14 +304,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e198ff80edc5c8260800000000000000
-      internalID: 7101152821159889182
+      spriteID: 4ef4272e4db051ba0800000000000000
+      internalID: -6118971509752836124
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy 03-1_5
+      name: Archer_Sheet_5
       rect:
         serializedVersion: 2
         x: 64
@@ -289,14 +325,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 52bdf22dec5fab9e0800000000000000
-      internalID: -1604700048565740763
+      spriteID: 21c290f00bc3a0df0800000000000000
+      internalID: -213291305482507246
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy 03-1_6
+      name: Archer_Sheet_6
       rect:
         serializedVersion: 2
         x: 0
@@ -310,14 +346,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5706c1986c2288da0800000000000000
-      internalID: -5942461472216162187
+      spriteID: 42d034d1f99c85f40800000000000000
+      internalID: 5717541412174761252
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy 03-1_7
+      name: Archer_Sheet_7
       rect:
         serializedVersion: 2
         x: 32
@@ -331,14 +367,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3caa19be438631030800000000000000
-      internalID: 3464227114877823683
+      spriteID: 9ae5a95c03fd53930800000000000000
+      internalID: 4122446434494209705
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy 03-1_8
+      name: Archer_Sheet_8
       rect:
         serializedVersion: 2
         x: 64
@@ -352,14 +388,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cbe93e710967df2b0800000000000000
-      internalID: -5549148804602421572
+      spriteID: 044b35bf014a33290800000000000000
+      internalID: -7911799727516830656
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy 03-1_9
+      name: Archer_Sheet_9
       rect:
         serializedVersion: 2
         x: 0
@@ -373,14 +409,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 41bfbc19da90575f0800000000000000
-      internalID: -759690321062003948
+      spriteID: 6f63a43940f0ee5d0800000000000000
+      internalID: -3031468986848364810
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy 03-1_10
+      name: Archer_Sheet_10
       rect:
         serializedVersion: 2
         x: 32
@@ -394,14 +430,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 390c6f433c03436b0800000000000000
-      internalID: -5317571645052370797
+      spriteID: e324906acd21bccd0800000000000000
+      internalID: -2536913226205412802
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy 03-1_11
+      name: Archer_Sheet_11
       rect:
         serializedVersion: 2
         x: 64
@@ -415,8 +451,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2f7ea7df179c994f0800000000000000
-      internalID: -821403965597227022
+      spriteID: b6cbc338eb4a608e0800000000000000
+      internalID: -1727512268897469333
       vertices: []
       indices: 
       edges: []

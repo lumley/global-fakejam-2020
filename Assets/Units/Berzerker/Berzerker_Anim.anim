@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Archer_Anim
+  m_Name: Berzerker_Anim
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,13 +20,13 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: -5102509537803006611, guid: 032ffa6ad6a4c448893f22e743e75a74,
+      value: {fileID: -5620391342627164142, guid: 409cc490aba6d4f628ccf89553a14ddb,
         type: 3}
     - time: 0.083333336
-      value: {fileID: -7249957088995020776, guid: 032ffa6ad6a4c448893f22e743e75a74,
+      value: {fileID: -5496443346842798519, guid: 409cc490aba6d4f628ccf89553a14ddb,
         type: 3}
     - time: 0.16666667
-      value: {fileID: -6032910112889074845, guid: 032ffa6ad6a4c448893f22e743e75a74,
+      value: {fileID: 1268281351848744627, guid: 409cc490aba6d4f628ccf89553a14ddb,
         type: 3}
     attribute: m_Sprite
     path: 
@@ -47,9 +47,9 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: -5102509537803006611, guid: 032ffa6ad6a4c448893f22e743e75a74, type: 3}
-    - {fileID: -7249957088995020776, guid: 032ffa6ad6a4c448893f22e743e75a74, type: 3}
-    - {fileID: -6032910112889074845, guid: 032ffa6ad6a4c448893f22e743e75a74, type: 3}
+    - {fileID: -5620391342627164142, guid: 409cc490aba6d4f628ccf89553a14ddb, type: 3}
+    - {fileID: -5496443346842798519, guid: 409cc490aba6d4f628ccf89553a14ddb, type: 3}
+    - {fileID: 1268281351848744627, guid: 409cc490aba6d4f628ccf89553a14ddb, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}

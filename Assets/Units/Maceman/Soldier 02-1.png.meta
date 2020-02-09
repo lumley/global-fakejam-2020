@@ -1,43 +1,43 @@
 fileFormatVersion: 2
-guid: f414fe848067b4c89aa1fa1bd5924804
+guid: 042be21e6ed0e456fbcf0e29c55e52d5
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2952730121602807721
-    second: Enemy 04-1_0
+      213: 6755256547522905175
+    second: Soldier 02-1_0
   - first:
-      213: 603246180932034874
-    second: Enemy 04-1_1
+      213: 2180035727253629138
+    second: Soldier 02-1_1
   - first:
-      213: -5161489949763356392
-    second: Enemy 04-1_2
+      213: 659479557171071342
+    second: Soldier 02-1_2
   - first:
-      213: -8740708222697440525
-    second: Enemy 04-1_3
+      213: -6590666832991784353
+    second: Soldier 02-1_3
   - first:
-      213: 6623458078085082728
-    second: Enemy 04-1_4
+      213: -7529056480212617048
+    second: Soldier 02-1_4
   - first:
-      213: -2830400777432795297
-    second: Enemy 04-1_5
+      213: 8531045576034332222
+    second: Soldier 02-1_5
   - first:
-      213: -7287813568785449157
-    second: Enemy 04-1_6
+      213: -6535788579875426181
+    second: Soldier 02-1_6
   - first:
-      213: -2866906920947679445
-    second: Enemy 04-1_7
+      213: 1246538981673838103
+    second: Soldier 02-1_7
   - first:
-      213: 4939714459312616774
-    second: Enemy 04-1_8
+      213: 7839273274692156646
+    second: Soldier 02-1_8
   - first:
-      213: 1188347423493197173
-    second: Enemy 04-1_9
+      213: -6144530192527908875
+    second: Soldier 02-1_9
   - first:
-      213: 4779613494383706331
-    second: Enemy 04-1_10
+      213: 7521071013033117722
+    second: Soldier 02-1_10
   - first:
-      213: -7913673970954426626
-    second: Enemy 04-1_11
+      213: 581691319504875684
+    second: Soldier 02-1_11
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -72,7 +72,7 @@ TextureImporter:
     mipBias: -100
     wrapU: 1
     wrapV: 1
-    wrapW: 0
+    wrapW: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -170,7 +170,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Enemy 04-1_0
+      name: Soldier 02-1_0
       rect:
         serializedVersion: 2
         x: 0
@@ -184,14 +184,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 758c440499bc507d0800000000000000
-      internalID: -2952730121602807721
+      spriteID: 7540cb10a0e7fbd50800000000000000
+      internalID: 6755256547522905175
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy 04-1_1
+      name: Soldier 02-1_1
       rect:
         serializedVersion: 2
         x: 32
@@ -205,14 +205,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a31a09694392f5800800000000000000
-      internalID: 603246180932034874
+      spriteID: 2d8ec9091fa014e10800000000000000
+      internalID: 2180035727253629138
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy 04-1_2
+      name: Soldier 02-1_2
       rect:
         serializedVersion: 2
         x: 64
@@ -226,14 +226,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8193b98cc34be58b0800000000000000
-      internalID: -5161489949763356392
+      spriteID: e6940d5c921f62900800000000000000
+      internalID: 659479557171071342
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy 04-1_3
+      name: Soldier 02-1_3
       rect:
         serializedVersion: 2
         x: 0
@@ -247,14 +247,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3fa78c48e24c2b680800000000000000
-      internalID: -8740708222697440525
+      spriteID: f52739a2f6f3984a0800000000000000
+      internalID: -6590666832991784353
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy 04-1_4
+      name: Soldier 02-1_4
       rect:
         serializedVersion: 2
         x: 32
@@ -268,14 +268,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 86ee3f887004beb50800000000000000
-      internalID: 6623458078085082728
+      spriteID: 8a8f21b950b638790800000000000000
+      internalID: -7529056480212617048
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy 04-1_5
+      name: Soldier 02-1_5
       rect:
         serializedVersion: 2
         x: 64
@@ -289,14 +289,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f57f0213d7568b8d0800000000000000
-      internalID: -2830400777432795297
+      spriteID: e3ea13280cc546670800000000000000
+      internalID: 8531045576034332222
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy 04-1_6
+      name: Soldier 02-1_6
       rect:
         serializedVersion: 2
         x: 0
@@ -310,14 +310,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b3f7543fb2c7cda90800000000000000
-      internalID: -7287813568785449157
+      spriteID: b7078792ae63c45a0800000000000000
+      internalID: -6535788579875426181
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy 04-1_7
+      name: Soldier 02-1_7
       rect:
         serializedVersion: 2
         x: 32
@@ -331,14 +331,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b2ffdcc4853b638d0800000000000000
-      internalID: -2866906920947679445
+      spriteID: 716a85179989c4110800000000000000
+      internalID: 1246538981673838103
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy 04-1_8
+      name: Soldier 02-1_8
       rect:
         serializedVersion: 2
         x: 64
@@ -352,14 +352,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 645703701246d8440800000000000000
-      internalID: 4939714459312616774
+      spriteID: 6ec3d335281bacc60800000000000000
+      internalID: 7839273274692156646
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy 04-1_9
+      name: Soldier 02-1_9
       rect:
         serializedVersion: 2
         x: 0
@@ -373,14 +373,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 57d001f7fabdd7010800000000000000
-      internalID: 1188347423493197173
+      spriteID: 5ff16b2585e3abaa0800000000000000
+      internalID: -6144530192527908875
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy 04-1_10
+      name: Soldier 02-1_10
       rect:
         serializedVersion: 2
         x: 32
@@ -394,14 +394,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bd087605629945240800000000000000
-      internalID: 4779613494383706331
+      spriteID: a18835eec36306860800000000000000
+      internalID: 7521071013033117722
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy 04-1_11
+      name: Soldier 02-1_11
       rect:
         serializedVersion: 2
         x: 64
@@ -415,8 +415,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ef6a10da37bfc2290800000000000000
-      internalID: -7913673970954426626
+      spriteID: 4a034045c25921800800000000000000
+      internalID: 581691319504875684
       vertices: []
       indices: 
       edges: []
@@ -424,7 +424,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e0078af1fe0b4a33993d0570c36daea
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
