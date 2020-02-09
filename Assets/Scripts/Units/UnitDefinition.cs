@@ -26,6 +26,7 @@ namespace Fakejam.Units
 
         [Header("While In Combat")] [SerializeField] private SquadBehavior _squadBehavior;
         [SerializeField] private AttackBehavior _attackBehavior;
+        [SerializeField] private Shot _shotPrefab;
 
         [Header("Production")] [SerializeField]
         private float _productionTime;
@@ -59,5 +60,7 @@ namespace Fakejam.Units
         public GameObject PrefabOfProductionUnit => _prefabOfProductionUnit;
 
         public AttackBehavior AttackBehavior => _attackBehavior;
+
+        public Shot ShotPrefab => _shotPrefab;
     }
 }

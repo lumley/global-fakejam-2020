@@ -11,7 +11,7 @@ namespace Fakejam.Units
         {
             foreach (var unitController in enemyTargets)
             {
-                unitController.TakeDamage(thisUnit.UnitDefinition.Damage);
+                thisUnit.Shoot(unitController);
             }
         }
     }

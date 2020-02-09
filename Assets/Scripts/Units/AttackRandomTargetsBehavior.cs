@@ -22,7 +22,7 @@ namespace Fakejam.Units
             {
                 int index = (i + startingEnemy) % enemyTargetsCount;
                 var unitController = enemyTargets[index];
-                unitController.TakeDamage(thisUnit.UnitDefinition.Damage);
+                thisUnit.Shoot(unitController);
             }
         }
     }

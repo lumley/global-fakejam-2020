@@ -1,11 +1,11 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
+using Fakejam.GameUtilities;
+using Fakejam.Input;
 using Fakejam.Players;
 using Fakejam.Units;
 using UnityEngine;
 using UnityEngine.AI;
-using Object = UnityEngine.Object;
 
 namespace Units
 {
@@ -27,6 +27,7 @@ namespace Units
 
         private readonly Collider[] _potentialTargets = new Collider[20];
         private readonly List<UnitController> _targetUnitControllers = new List<UnitController>();
+        private PoolingManager _poolingManager;
 
         public PlayerType PlayerType => playerType;
 
@@ -44,6 +45,7 @@ namespace Units
 
         void Start()
         {
+            _poolingManager = Toolbox.Get<PoolingManager>();
             _health = unitDefinition.MaxHealth;
             _attackCoroutine = StartCoroutine(AttackRepeat());
             _alreadyStarted = true;
@@ -126,6 +128,12 @@ namespace Units
 
             //Debug.Log("Move to position " + position);
             _navMeshAgent.destination = position;
+        }
+
+        public void Shoot(UnitController enemy)
+        {
+            var shot = _poolingManager.Create(UnitDefinition.ShotPrefab);
+            shot.SetTarget(transform, enemy, unitDefinition.Damage, UnitDefinition.ShotPrefab);
         }
     }
 }

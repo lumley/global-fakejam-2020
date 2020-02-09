@@ -26,7 +26,7 @@ namespace Fakejam.Units
 
             if (weakestEnemy != null)
             {
-                weakestEnemy.TakeDamage(thisUnit.UnitDefinition.Damage);
+                thisUnit.Shoot(weakestEnemy);
             }
         }
     }

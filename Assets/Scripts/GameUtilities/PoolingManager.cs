@@ -8,7 +8,7 @@ namespace Fakejam.GameUtilities
 
         private readonly Dictionary<GameObject, Stack<GameObject>> _prefabToObjectMap = new Dictionary<GameObject, Stack<GameObject>>();
 
-        public T Create<T>(T prefab, Transform onTransform) where T : MonoBehaviour
+        public T Create<T>(T prefab, Transform onTransform = null) where T : MonoBehaviour
         {
             var instance = Create(prefab.gameObject, onTransform);
             if (instance != null)
@@ -19,7 +19,7 @@ namespace Fakejam.GameUtilities
             return null;
         }
 
-        public GameObject Create(GameObject prefab, Transform onTransform)
+        public GameObject Create(GameObject prefab, Transform onTransform = null)
         {
             if (_prefabToObjectMap.TryGetValue(prefab, out Stack<GameObject> pool))
             {
