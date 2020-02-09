@@ -61,11 +61,6 @@ public class CombatSceneManager : MonoBehaviour
     {
         SquadGroup group = Instantiate(squadPrefab, squadsContainer.transform);
         squadList.Add(group);
-        group.owner = squadDef.Owner;
-
-        group.name =
-            (squadDef.Owner == PlayerType.Player ? "P_" : "E_") +
-            (squadDef.UnitDefinition.PrefabOfUnit.name);
 
         group.transform.position = new Vector3(
 
@@ -73,6 +68,10 @@ public class CombatSceneManager : MonoBehaviour
             Random.Range(spawnArea.bounds.min.y, spawnArea.bounds.max.y),
             1f);
 
-        group.spawnMembers(squadDef.UnitDefinition, numMembers);
+        group.spawnMembers(squadDef.Owner, squadDef.UnitDefinition, numMembers);
+
+        group.name =
+            (squadDef.Owner == PlayerType.Player ? "P_" : "E_") +
+            (squadDef.UnitDefinition.PrefabOfUnit.name);
     }
 }
