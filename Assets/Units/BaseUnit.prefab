@@ -54,6 +54,9 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   displaySprite: {fileID: 5859407549587306206}
+  OnUnitDied:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!195 &6547944558766945931
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -311,12 +314,12 @@ PrefabInstance:
     - target: {fileID: 415390496324880428, guid: 4ad14030a201e4908aba785db57453c2,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 100
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 415390496324880428, guid: 4ad14030a201e4908aba785db57453c2,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 20
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 415390496324880428, guid: 4ad14030a201e4908aba785db57453c2,
         type: 3}
@@ -362,6 +365,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 1604681619878748716, guid: 4ad14030a201e4908aba785db57453c2,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 1604681619878748716, guid: 4ad14030a201e4908aba785db57453c2,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5558482011263109501, guid: 4ad14030a201e4908aba785db57453c2,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 5558482011263109501, guid: 4ad14030a201e4908aba785db57453c2,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8516164667221973973, guid: 4ad14030a201e4908aba785db57453c2,
         type: 3}
