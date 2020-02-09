@@ -53,7 +53,7 @@ public class CombatSceneManager : MonoBehaviour
             }
             if(numRemaining > 0)
             {
-                spawnSquadGroup(owner, squad, squad.UnitDefinition.SquadSize);
+                spawnSquadGroup(owner, squad, numRemaining);
             }
         }
     }
