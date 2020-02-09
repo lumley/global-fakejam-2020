@@ -5,6 +5,8 @@ using Fakejam.Units;
 using UnityEngine;
 using UnityEngine.Events;
 
+[RequireComponent(typeof(EnemySquadManager))]
+
 public class CombatSceneManager : MonoBehaviour
 {
     private List<SquadGroup> playerSquads;
@@ -20,10 +22,13 @@ public class CombatSceneManager : MonoBehaviour
     public UnityEvent OnPlayerWon;
     public UnityEvent OnPlayerLost;
 
+    private EnemySquadManager enemySquadManager;
+
     // Use this for initialization
     private void Start()
     {
         Toolbox.Get<InputManager>().CombatSceneManager = this;
+        
         CreateSquads();
     }
 
@@ -38,6 +43,9 @@ public class CombatSceneManager : MonoBehaviour
 
         spawnSquadGroupsFromList(PlayerType.Player, playerSquadDefs);
         spawnSquadGroupsFromList(PlayerType.Enemy1, enemySquadDefs);
+
+        enemySquadManager = GetComponent<EnemySquadManager>();
+        enemySquadManager.resetTimer();
     }
 
     private void spawnSquadGroupsFromList( PlayerType owner, List<Squad> squadDefist)
@@ -94,6 +102,15 @@ public class CombatSceneManager : MonoBehaviour
         {
             OnWin();
         }
+    }
+
+    public void assignEnemySquadATarget()
+    {
+        int enemyIndex = Random.Range(0, enemySquads.Count - 1);
+        int playerIndex = Random.Range(0, playerSquads.Count - 1);
+        SquadGroup enemySquad = enemySquads[enemyIndex];
+        SquadGroup playerSquad = playerSquads[playerIndex];
+        enemySquad.setTarget(playerSquad);
     }
 
     private void OnWin()
