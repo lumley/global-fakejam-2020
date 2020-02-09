@@ -1,11 +1,11 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
+using Fakejam.GameUtilities;
+using Fakejam.Input;
 using Fakejam.Players;
 using Fakejam.Units;
 using UnityEngine;
 using UnityEngine.AI;
-using Object = UnityEngine.Object;
 
 namespace Units
 {
@@ -27,15 +27,26 @@ namespace Units
 
         private bool _alreadyStarted = false;
 
-        void Start()
+        private readonly Collider[] _potentialTargets = new Collider[20];
+        private readonly List<UnitController> _targetUnitControllers = new List<UnitController>();
+        private PoolingManager _poolingManager;
+
+        public PlayerType PlayerType => playerType;
+
+        public UnitDefinition UnitDefinition => unitDefinition;
+
+        public int Health => _health;
+        
+        private void Start()
         {
+            _poolingManager = Toolbox.Get<PoolingManager>();
             _healthBar = GetComponentInChildren<HealthBar>();
             _healthBar.SetHealth(1);
 
             playerType = PlayerType.Player;
             _navMeshAgent = GetComponent<NavMeshAgent>();
             _navMeshAgent.speed = unitDefinition.MovementSpeed;
-
+        
             _health = unitDefinition.MaxHealth;
             _attackCoroutine = StartCoroutine(AttackRepeat());
             _alreadyStarted = true;
@@ -57,34 +68,21 @@ namespace Units
 
         private IEnumerator AttackRepeat()
         {
-            while (true)
+            while (this != null)
             {
                 if (gameObject.activeSelf)
                 {
-                    var targets = Physics.OverlapSphere(transform.position, unitDefinition.AttackRange, layerMask);
-
-                    foreach (Collider target in targets)
+                    int actualTargetCount = Physics.OverlapSphereNonAlloc(transform.position, unitDefinition.AttackRange,_potentialTargets, layerMask);
+                    _targetUnitControllers.Clear();
+                    for (int i = 0; i < actualTargetCount; i++)
                     {
-                        var unitController = target.gameObject.GetComponent<UnitController>();
-
-                        if (unitController == this)
+                        var enemyTarget = _potentialTargets[i].GetComponent<UnitController>();
+                        if (enemyTarget != null && enemyTarget.playerType != playerType)
                         {
-                            continue;
+                            _targetUnitControllers.Add(enemyTarget);
                         }
-
-                        if (unitController == null)
-                        {
-                            Debug.Log("tried to attack non attackable object '" + target.name + "'");
-                            continue;
-                        }
-
-                        if (unitController.playerType != playerType)
-                        {
-                            unitController.TakeDamage(unitDefinition.Damage);
-                        }
-
-                        Debug.Log("attacking " + target.name);
                     }
+                    unitDefinition.AttackBehavior.Attack(this, _targetUnitControllers);
                 }
                 else
                 {
@@ -96,7 +94,7 @@ namespace Units
         }
 
 
-        void TakeDamage(int damage)
+        public void TakeDamage(int damage)
         {
             if (_alreadyStarted == false)
             {
@@ -132,6 +130,12 @@ namespace Units
 
             //Debug.Log("Move to position " + position);
             _navMeshAgent.destination = position;
+        }
+
+        public void Shoot(UnitController enemy)
+        {
+            var shot = _poolingManager.Create(UnitDefinition.ShotPrefab);
+            shot.SetTarget(transform, enemy, unitDefinition.Damage, UnitDefinition.ShotPrefab);
         }
     }
 }

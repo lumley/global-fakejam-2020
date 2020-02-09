@@ -24,6 +24,9 @@ MonoBehaviour:
     type: 3}
   _icon: {fileID: 21300000, guid: 520ed4c497c47441689230ff80621ab0, type: 3}
   _squadBehavior: {fileID: 11400000, guid: 72c04987c9bb241758ef6b5449066bef, type: 2}
+  _attackBehavior: {fileID: 11400000, guid: 9231074e8484845ffa05c276d424e155, type: 2}
+  _shotPrefab: {fileID: 9108212120662588865, guid: 4e41d1813418748a3ad7c30ea4cbc710,
+    type: 3}
   _productionTime: 1
   _prefabOfProductionUnit: {fileID: 8225825095962130060, guid: ae8989c18af0f4ecebe75ebc35a99b40,
     type: 3}
