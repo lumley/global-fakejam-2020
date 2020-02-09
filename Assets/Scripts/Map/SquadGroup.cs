@@ -25,6 +25,11 @@ namespace Fakejam.Input
         {
             this.owner = owner;
             influence.setColorToOwner(this.owner);
+            UnitControlFlag unitFlag = controlSurface as UnitControlFlag;
+            if(!!unitFlag)
+            {
+                
+            }
             controlSurface.gameObject.SetActive(this.owner == PlayerType.Player);
             unitType = unit;
             influence.transform.localScale = new Vector3(unitType.InfluenceRange, unitType.InfluenceRange, 1f);
