@@ -37,6 +37,8 @@ namespace Units
 
         public int Health => _health;
 
+        public SpriteRenderer displaySprite;
+
         private void Awake()
         {
             playerType = PlayerType.Player;
@@ -60,6 +62,9 @@ namespace Units
         public void setOwner(PlayerType type)
         {
             playerType = type;
+            displaySprite.color = playerType == PlayerType.Player ?
+                new Color(1, 1, 1) :
+                new Color(1, 0.5f, 0.5f);
         }
 
         private void OnDisable()

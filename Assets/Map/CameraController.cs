@@ -23,7 +23,7 @@ public class CameraController : MonoBehaviour
         Vector3 pos = Camera.main.ScreenToViewportPoint(Input.mousePosition - dragOrigin);
         var posX = pos.x * dragSpeed;
         var posY = pos.y * dragSpeed;
-        Debug.Log(posX + "-" + posY);
+        //Debug.Log(posX + "-" + posY);
         Vector3 move = new Vector3(posX, posY, 0);
         
         transform.Translate(move, Space.World);

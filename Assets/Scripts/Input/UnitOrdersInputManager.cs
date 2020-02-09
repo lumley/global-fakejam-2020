@@ -38,7 +38,7 @@ namespace Fakejam.Input
                 var targetSquad = clickedFlag.Targetable as SquadGroup;
                 if(targetSquad && targetSquad.owner == PlayerType.Player)
                 {
-                    Debug.Log("Selecting Player Unit For Orders", targetSquad);
+                    //Debug.Log("Selecting Player Unit For Orders", targetSquad);
                     sourceSquad = targetSquad;
                     return;
                 }
@@ -54,7 +54,7 @@ namespace Fakejam.Input
 
         public void MapClicked(Vector3 targetVec)
         {
-            Debug.Log("Map Clicked");
+            //Debug.Log("Map Clicked");
             if (sourceSquad == null)
             {
                 return;
