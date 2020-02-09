@@ -36,14 +36,19 @@ namespace Units
         public UnitDefinition UnitDefinition => unitDefinition;
 
         public int Health => _health;
-        
+
+        private void Awake()
+        {
+            playerType = PlayerType.Player;
+        }
+
         private void Start()
         {
             _poolingManager = Toolbox.Get<PoolingManager>();
             _healthBar = GetComponentInChildren<HealthBar>();
             _healthBar.SetHealth(1);
 
-            playerType = PlayerType.Player;
+            
             _navMeshAgent = GetComponent<NavMeshAgent>();
             _navMeshAgent.speed = unitDefinition.MovementSpeed;
         

@@ -29,8 +29,11 @@ namespace Fakejam.Input
                 SquadMember newMember = Instantiate(unitType.PrefabOfUnit, combatManager.squadMemberContainer.transform);
                 squadMembers.Add(newMember);
 
-                newMember.setOwner(owner);
+                newMember.setOwner(this.owner);
                 newMember.TeleportTo(getRandomPositionInBounds(transform.position, influence.Zone.radius));
+                newMember.name =
+                    (owner == PlayerType.Player ? "PM-" : "EM-") +
+                    (unitType.PrefabOfUnit.name);
             }
         }
 
