@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f23be543f2648979feb36ee22cbb45a, type: 3}
   m_Name: Juggernaut
   m_EditorClassIdentifier: 
-  _maxHealth: 20
-  _damage: 1
-  _defense: 0
-  _attackSpeed: 1
+  _maxHealth: 500
+  _damage: 50
+  _defense: 5
+  _attackSpeed: 3
   _attackRange: 3
   _movementSpeed: 1
   _squadSize: 4
@@ -26,7 +26,7 @@ MonoBehaviour:
     type: 3}
   _icon: {fileID: -5756170779092177563, guid: 121010e3d797f4c6f885feb9c2b801b0, type: 3}
   _squadBehavior: {fileID: 11400000, guid: 72c04987c9bb241758ef6b5449066bef, type: 2}
-  _attackBehavior: {fileID: 11400000, guid: 5895cdcc6dd5443bdb3f73df3e36fd38, type: 2}
+  _attackBehavior: {fileID: 11400000, guid: a4ba70c822ed54e76be685b7fa1d27d0, type: 2}
   _shotPrefab: {fileID: 9108212120662588865, guid: 710f66149f80d43f8a8d3632572b6cb6,
     type: 3}
   _productionTime: 7

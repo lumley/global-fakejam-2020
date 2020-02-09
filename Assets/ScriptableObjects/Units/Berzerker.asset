@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Berzerker
   m_EditorClassIdentifier: 
   _maxHealth: 30
-  _damage: 0
+  _damage: 10
   _defense: 0
   _attackSpeed: 0.25
   _attackRange: 1
@@ -29,6 +29,6 @@ MonoBehaviour:
   _attackBehavior: {fileID: 11400000, guid: 9231074e8484845ffa05c276d424e155, type: 2}
   _shotPrefab: {fileID: 9108212120662588865, guid: 82be468ca68da4c4a8ae27e7adfa78b2,
     type: 3}
-  _productionTime: 1
+  _productionTime: 0.5
   _prefabOfProductionUnit: {fileID: 8225825095962130060, guid: 5a5cd48d86d404209aaf781357897c63,
     type: 3}

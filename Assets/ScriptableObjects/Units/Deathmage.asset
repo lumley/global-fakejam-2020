@@ -10,25 +10,25 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5f23be543f2648979feb36ee22cbb45a, type: 3}
-  m_Name: Archer
+  m_Name: Deathmage
   m_EditorClassIdentifier: 
-  _maxHealth: 75
-  _damage: 75
+  _maxHealth: 300
+  _damage: 500
   _defense: 0
-  _attackSpeed: 2
-  _attackRange: 5
+  _attackSpeed: 4
+  _attackRange: 4
   _movementSpeed: 1
   _squadSize: 4
-  _influenceRange: 5
-  _prefabOfUnit: {fileID: 7978113814463161167, guid: 7cd251031d5e94b02b38b37326974f61,
+  _influenceRange: 4
+  _prefabOfUnit: {fileID: 3544278728355432433, guid: fc80e9d3b468b4b378432cce0b19688d,
     type: 3}
-  _prefabOfCorpse: {fileID: 9037366272369722511, guid: 043d7b4f94d544ff4ac15119669c866a,
+  _prefabOfCorpse: {fileID: 119556356324598632, guid: eada6deba733f445eb0db471c3b114a4,
     type: 3}
-  _icon: {fileID: -7249957088995020776, guid: 032ffa6ad6a4c448893f22e743e75a74, type: 3}
+  _icon: {fileID: -4492710670253011430, guid: 557ab1639082b440dae7557647795d8d, type: 3}
   _squadBehavior: {fileID: 11400000, guid: 72c04987c9bb241758ef6b5449066bef, type: 2}
   _attackBehavior: {fileID: 11400000, guid: 22bf91f91b7be46afa13b891df54792b, type: 2}
-  _shotPrefab: {fileID: 9108212120662588865, guid: 4e41d1813418748a3ad7c30ea4cbc710,
+  _shotPrefab: {fileID: 9108212120662588865, guid: c5923fa265c894379b84651fadfb8a32,
     type: 3}
-  _productionTime: 4
-  _prefabOfProductionUnit: {fileID: 4847499225478935309, guid: e6b8f94f144d74deaa0187d60f5443bf,
+  _productionTime: 7
+  _prefabOfProductionUnit: {fileID: 8225825095962130060, guid: ec1a9f90716c04904be10010418bb052,
     type: 3}

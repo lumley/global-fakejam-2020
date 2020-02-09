@@ -109,7 +109,7 @@ namespace Units
         }
 
 
-        public void TakeDamage(int damage)
+        public void TakeDamage(int rawDamage)
         {
             if (_alreadyStarted == false)
             {
@@ -123,7 +123,12 @@ namespace Units
             }
 
             var objectName = transform.parent.name;
-            _health -= damage;
+            // reduce raw damage by Defense value.
+            // Take a minimum of 1 damage.
+
+            var finalDamage = Math.Max(rawDamage - unitDefinition.Defense, 1);
+            
+            _health -= finalDamage;
 
             _healthBar.SetHealth(_health/(float)unitDefinition.MaxHealth);
             if (_health <= 0)

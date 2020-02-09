@@ -2092,6 +2092,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Toolbox
       objectReference: {fileID: 0}
+    - target: {fileID: 4520691641442923623, guid: 22e66a302f9ec469ba8545bbefe8e3cf,
+        type: 3}
+      propertyPath: _combatSquads.Array.data[1].UnitDefinition
+      value: 
+      objectReference: {fileID: 11400000, guid: 850cca1dd3e964cb598bd89ee577b410,
+        type: 2}
     - target: {fileID: 6082552334736559206, guid: 22e66a302f9ec469ba8545bbefe8e3cf,
         type: 3}
       propertyPath: m_RootOrder
