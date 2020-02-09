@@ -44,7 +44,7 @@ namespace Fakejam.Units
 
         public float MovementSpeed => _movementSpeed;
 
-        public float SquadSize => _squadSize;
+        public int SquadSize => _squadSize;
         public float InfluenceRange => _influenceRange;
 
         public SquadMember PrefabOfUnit => _prefabOfUnit;

@@ -8,7 +8,7 @@ namespace Fakejam.Input
     // A group of Squad Members that can be 
     public class SquadGroup : UnitTargetable
     {
-        public UnitDefinition unitType;
+        private UnitDefinition unitType;
         private UnitTargetable combatTarget;
         private List<SquadMember> squadMembers;
 
@@ -18,27 +18,27 @@ namespace Fakejam.Input
         [SerializeField]
         private GameObject influenceContainer;
 
-        private void createSquadMembers()
+        public void spawnMembers(UnitDefinition unit, int numMembers)
         {
-            BattleManager battleManager = Toolbox.Get<BattleManager>();
+            unitType = unit;
+            influenceContainer.transform.localScale = new Vector3(unitType.InfluenceRange, unitType.InfluenceRange, 1f);
+
+            CombatSceneManager combatManager = Toolbox.Get<InputManager>().CombatSceneManager;
+
             squadMembers = new List<SquadMember>();
-            for (int i = 0; i < unitType.SquadSize; i++)
+            for (int i = 0; i < numMembers; i++)
             {
-                SquadMember newMember = Instantiate(unitType.PrefabOfUnit, battleManager.combatUnitsContainer.transform);
+                SquadMember newMember = Instantiate(unitType.PrefabOfUnit, combatManager.squadMemberContainer.transform);
                 squadMembers.Add(newMember);
 
-                //Collider2D spawnArea = battleManager.playerSpawnArea;
                 newMember.setOwner(owner);
                 newMember.TeleportTo(getRandomPositionInBounds(transform.position, influenceRange.radius));
             }
         }
 
-        protected override void Start()
+        private void Awake()
         {
-            base.Start();
             combatTarget = null;
-            influenceContainer.transform.localScale = new Vector3(unitType.InfluenceRange, unitType.InfluenceRange, 1f);
-            createSquadMembers();
         }
 
         public void setTarget(UnitTargetable target)

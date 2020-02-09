@@ -10,7 +10,8 @@ namespace Fakejam.Input
         private string cancelKeyName = "Cancel";
         
         public CombatInputManager CombatInputManager { get; set; }
-
+        public CombatSceneManager CombatSceneManager { get; set; }
+        
         public KeyTypeEvent OnKeyPressed;
 
         private void Update()

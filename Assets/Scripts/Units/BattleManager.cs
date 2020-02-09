@@ -34,13 +34,6 @@ namespace Fakejam.Units
             return squadsForOwner;
         }
 
-        
-        public GameObject combatUnitsContainer;
-        
-        public BoxCollider2D playerSpawnArea;
-        
-        public BoxCollider2D enemySpawnArea;
-
         public void SetSquadsForCombat(IReadOnlyCollection<Squad> allSquads)
         {
             _combatSquads = new List<Squad>(allSquads);
