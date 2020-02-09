@@ -12,12 +12,23 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2479781714367067872, guid: d9f402aa1669f4548b77a3634e7ff4dc,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 0f8066c02c03a49af986740ee5a3e177, type: 2}
     - target: {fileID: 2723239302301363371, guid: d9f402aa1669f4548b77a3634e7ff4dc,
         type: 3}
       propertyPath: unitDefinition
       value: 
       objectReference: {fileID: 11400000, guid: 9d7104ac63d3a44319df36699f13e70f,
         type: 2}
+    - target: {fileID: 5859407549587306206, guid: d9f402aa1669f4548b77a3634e7ff4dc,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -2952730121602807721, guid: f414fe848067b4c89aa1fa1bd5924804,
+        type: 3}
     - target: {fileID: 8145161309847878163, guid: d9f402aa1669f4548b77a3634e7ff4dc,
         type: 3}
       propertyPath: m_Sprite
