@@ -21,15 +21,20 @@ Tap on a building to start the production of a unit. You will want to amass the 
 
 There are 5 differeent types of Unit in the game. Different units have different health, attack range, attack speed, damage, and even attack patterns. Explore and learn how to use them best!
 
-**Berzerker Skeleton:** Moves fast. Attacks fast. Dies fast. Everything fast. Gangs up on a single opponent, and tears them to shreds.
+**Berzerker Skeleton:**
+Moves fast. Attacks fast. Dies fast. Everything fast. Gangs up on a single opponent, and tears them to shreds.
 
-**Foot Soldier:** A well rounded troop. Decent health and damage. Cleaves through 3 enemies with a single blow!
+**Foot Soldier:**
+A well rounded troop. Decent health and damage. Cleaves through 3 enemies with a single blow!
 
-**Pumpkin Archer:** High damage, but long reload. Keep them protected from skeletons!
+**Pumpkin Archer:**
+High damage, but long reload. Keep them protected from skeletons!
 
-**Juggernaut Lich:** Lots of HP, with a slow AOE Attack. Anything caught in the blast zone will suffer.
+**Juggernaut Lich:**
+Lots of HP, with a slow AOE Attack. Anything caught in the blast zone will suffer.
 
-**Deathmage Elf:** Glass cannon. Low, health, but has extremely high damage, single shot attack, that can kill a juggernaut in one hit!
+**Deathmage Elf:**
+Glass cannon. Low, health, but has extremely high damage, single shot attack, that can kill a juggernaut in one hit!
 
 ## Progression
 
