@@ -128,7 +128,7 @@ PrefabInstance:
     - target: {fileID: 8773313799129322140, guid: d9f402aa1669f4548b77a3634e7ff4dc,
         type: 3}
       propertyPath: m_Name
-      value: Juggernaut
+      value: Juggernaut_Unit
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d9f402aa1669f4548b77a3634e7ff4dc, type: 3}

@@ -16,7 +16,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: d71edee558d0a4144b3277175d1725f2, type: 2}
+      objectReference: {fileID: 9100000, guid: bf811e4d6a50d413abd8c9110d63e0bc, type: 2}
     - target: {fileID: 2723239302301363371, guid: d9f402aa1669f4548b77a3634e7ff4dc,
         type: 3}
       propertyPath: unitDefinition
