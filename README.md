@@ -24,7 +24,7 @@ There are 5 differeent types of Unit in the game. Different units have different
 **Berzerker Skeleton:**
 Moves fast. Attacks fast. Dies fast. Everything fast. Gangs up on a single opponent, and tears them to shreds.
 
-**Foot Soldier:**
+**Maceman Soldier:**
 A well rounded troop. Decent health and damage. Cleaves through 3 enemies with a single blow!
 
 **Pumpkin Archer:**
