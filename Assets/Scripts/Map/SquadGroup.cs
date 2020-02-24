@@ -12,6 +12,8 @@ namespace Fakejam.Input
     // A group of Squad Members that can be 
     public class SquadGroup : UnitTargetable
     {
+        public GameObject playerFlagVisual;
+        public GameObject enemyFlagVisual;
         private UnitDefinition unitType;
         private UnitTargetable combatTarget;
         private List<SquadMember> squadMembers;
@@ -24,6 +26,8 @@ namespace Fakejam.Input
         public void spawnMembers(PlayerType owner, UnitDefinition unit, int numMembers)
         {
             this.owner = owner;
+            playerFlagVisual.SetActive(this.owner == PlayerType.Player);
+            enemyFlagVisual.SetActive(this.owner == PlayerType.Enemy1);
             influence.setColorToOwner(this.owner);
             UnitControlFlag unitFlag = controlSurface as UnitControlFlag;
             if(!!unitFlag)
@@ -75,7 +79,8 @@ namespace Fakejam.Input
         private void Awake()
         {
             combatTarget = null;
-        }
+            
+    }
 
         
         public void setTarget(UnitTargetable target)
