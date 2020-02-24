@@ -7,6 +7,9 @@ Developed in Unity2019.3.0f6.
 # Game
 
 Strategy game where you produce units and combat with them, organised in squads!
+
+[Play it right now, here!](https://lumley.itch.io/lods-necro-2)
+
 The game is split in two phases:
  - Unit production
  - Combat
